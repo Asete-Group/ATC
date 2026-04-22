@@ -19,6 +19,31 @@ export const metadata: Metadata = {
   title: "ATC China Brasil",
   description:
     "Conectamos sua empresa diretamente às melhores fábricas do mundo, com segurança e estratégia. Importação, exportação e sourcing na China.",
+  metadataBase: new URL("https://atc.lsx.li"),
+  openGraph: {
+    title: "ATC China Brasil",
+    description:
+      "Conectamos sua empresa diretamente às melhores fábricas do mundo, com segurança e estratégia. Importação, exportação e sourcing na China.",
+    url: "https://atc.lsx.li",
+    siteName: "ATC China Brasil",
+    images: [
+      {
+        url: "/atc-dark.png",
+        width: 1205,
+        height: 1205,
+        alt: "ATC China Brasil",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ATC China Brasil",
+    description:
+      "Conectamos sua empresa diretamente às melhores fábricas do mundo, com segurança e estratégia. Importação, exportação e sourcing na China.",
+    images: ["/atc-dark.png"],
+  },
   icons: {
     icon: [
       {
