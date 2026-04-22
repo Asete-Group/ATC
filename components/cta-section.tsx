@@ -22,8 +22,8 @@ export function CtaSection() {
         />
       </div>
 
-      <div className="mx-auto max-w-4xl px-6 py-24 md:py-32 text-center">
-        <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-white text-balance">
+      <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24 md:py-32 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-white text-balance">
           Pronto para importar com segurança e escala?
         </h2>
         <p className="mt-6 text-white/75 max-w-xl mx-auto leading-relaxed">

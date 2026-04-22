@@ -9,10 +9,10 @@ const points = [
 
 export function SimplifiedSection() {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="py-16 md:py-32 bg-background">
       <div className="mx-auto max-w-4xl px-6">
-        <div className="rounded-3xl border border-border bg-secondary/50 p-8 md:p-14">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
+        <div className="rounded-3xl border border-border bg-secondary/50 p-6 sm:p-8 md:p-14">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
             Importação simplificada
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed max-w-xl">
@@ -20,11 +20,11 @@ export function SimplifiedSection() {
             sem complicação.
           </p>
 
-          <ol className="mt-10 space-y-5">
+          <ol className="mt-8 space-y-4 sm:space-y-5">
             {points.map((p, i) => (
               <li
                 key={p}
-                className="flex gap-4 items-start border-b border-border/60 last:border-0 pb-5 last:pb-0"
+                className="flex gap-3 sm:gap-4 items-start border-b border-border/60 last:border-0 pb-4 sm:pb-5 last:pb-0"
               >
                 <span className="font-mono text-sm text-accent-foreground bg-accent/90 rounded-full size-7 inline-flex items-center justify-center shrink-0 font-semibold">
                   {i + 1}

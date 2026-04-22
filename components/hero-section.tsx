@@ -1,6 +1,6 @@
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
@@ -24,20 +24,23 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 pt-24 pb-28 md:pt-36 md:pb-40">
+      <div className="mx-auto max-w-6xl px-6 pt-14 pb-20 sm:pt-24 sm:pb-28 md:pt-36 md:pb-40">
         <div className="max-w-3xl">
-
-          <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight text-white text-balance">
+          <h1 className="mt-4 text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-white text-balance">
             Soluções em importação, exportação e sourcing internacional
           </h1>
 
-          <p className="mt-6 text-base md:text-lg text-white/75 max-w-xl leading-relaxed text-pretty">
+          <p className="mt-5 text-sm sm:text-base md:text-lg text-white/75 max-w-xl leading-relaxed text-pretty">
             Conectamos sua empresa diretamente às melhores fábricas do mundo,
             com segurança, estratégia e presença local na China.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <Button asChild size="lg" className="rounded-full px-6 h-12 bg-white text-foreground hover:bg-white/90">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full px-6 h-12 bg-white text-foreground hover:bg-white/90"
+            >
               <a href="#contato" className="inline-flex items-center gap-2">
                 Falar com especialista
                 <ArrowRight className="size-4" />
@@ -53,22 +56,24 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <dl className="mt-16 grid grid-cols-3 gap-6 max-w-xl">
+          <dl className="mt-10 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
             {[
               { v: "+1M", l: "toneladas exportadas" },
               { v: "+3.000", l: "clientes atendidos" },
               { v: "+10K", l: "produtos movimentados" },
             ].map((s) => (
-              <div key={s.l} className="border-l border-white/20 pl-4">
-                <dt className="font-mono text-xl md:text-2xl font-semibold text-white">
+              <div key={s.l} className="border-l border-white/20 pl-3 sm:pl-4">
+                <dt className="font-mono text-base sm:text-xl md:text-2xl font-semibold text-white">
                   {s.v}
                 </dt>
-                <dd className="text-xs text-white/60 mt-1 leading-snug">{s.l}</dd>
+                <dd className="text-[10px] sm:text-xs text-white/60 mt-1 leading-snug">
+                  {s.l}
+                </dd>
               </div>
             ))}
           </dl>
         </div>
       </div>
     </section>
-  )
+  );
 }

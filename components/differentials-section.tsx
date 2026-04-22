@@ -1,5 +1,5 @@
-import { Check } from "lucide-react"
-import Image from "next/image"
+import { Check } from "lucide-react";
+import Image from "next/image";
 
 const items = [
   {
@@ -18,14 +18,14 @@ const items = [
     title: "Acompanhamento ponta a ponta",
     desc: "Do primeiro contato à entrega final, com transparência total.",
   },
-]
+];
 
 export function DifferentialsSection() {
   return (
-    <section id="diferenciais" className="py-24 md:py-32 bg-background">
+    <section id="diferenciais" className="py-16 md:py-32 bg-background">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center">
-          <div className="relative aspect-[4/5] lg:aspect-auto lg:h-[520px] rounded-2xl overflow-hidden bg-primary">
+        <div className="grid gap-10 sm:gap-16 lg:grid-cols-2 lg:gap-20 items-center">
+          <div className="relative aspect-video sm:aspect-4/5 lg:aspect-auto lg:h-130 rounded-2xl overflow-hidden bg-primary">
             <Image
               src="https://br.lexlatin.com/sites/default/files/2023-02/exporta%C3%A7%C3%B5es.png"
               alt="Navio cargueiro com containers"
@@ -40,7 +40,7 @@ export function DifferentialsSection() {
                 width={1205}
                 height={375}
                 aria-hidden
-                className="w-3/5 max-w-[280px] h-auto"
+                className="w-3/5 max-w-70 h-auto"
               />
             </div>
           </div>
@@ -57,7 +57,7 @@ export function DifferentialsSection() {
               para reduzir riscos e aumentar margem.
             </p>
 
-            <ul className="mt-10 space-y-6">
+            <ul className="mt-8 space-y-5 sm:space-y-6">
               {items.map((it) => (
                 <li key={it.title} className="flex gap-4">
                   <span className="mt-1 inline-flex size-6 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
@@ -76,5 +76,5 @@ export function DifferentialsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

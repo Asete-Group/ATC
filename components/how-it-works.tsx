@@ -1,4 +1,4 @@
-import { ClipboardList, Handshake, Ship } from "lucide-react"
+import { ClipboardList, Handshake, Ship } from "lucide-react";
 
 const steps = [
   {
@@ -16,11 +16,11 @@ const steps = [
     title: "Logística & Entrega",
     desc: "Cuidamos de frete, alfândega e documentação até a porta da sua empresa.",
   },
-]
+];
 
 export function HowItWorks() {
   return (
-    <section id="como-funciona" className="py-24 md:py-32 bg-background">
+    <section id="como-funciona" className="py-16 md:py-32 bg-background">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
           <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
@@ -35,11 +35,11 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <ol className="mt-14 grid gap-6 md:grid-cols-3">
+        <ol className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 md:grid-cols-3">
           {steps.map((s, i) => (
             <li
               key={s.title}
-              className="group relative rounded-2xl border border-border bg-card p-8 transition-colors hover:border-accent/40"
+              className="group relative rounded-2xl border border-border bg-card p-6 sm:p-8 transition-colors hover:border-accent/40"
             >
               <div className="flex items-center justify-between">
                 <div className="inline-flex size-11 items-center justify-center rounded-xl bg-secondary text-primary">
@@ -60,5 +60,5 @@ export function HowItWorks() {
         </ol>
       </div>
     </section>
-  )
+  );
 }
