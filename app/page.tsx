@@ -7,6 +7,7 @@ import { StatsSection } from "@/components/stats-section"
 import { SimplifiedSection } from "@/components/simplified-section"
 import { CtaSection } from "@/components/cta-section"
 import { SiteFooter } from "@/components/site-footer"
+import { WhatsAppFab } from "@/components/whatsapp-fab"
 
 export default function Page() {
   return (
@@ -22,6 +23,7 @@ export default function Page() {
         <CtaSection />
       </main>
       <SiteFooter />
+      <WhatsAppFab />
     </>
   )
 }
