@@ -1,11 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { buildWhatsAppUrl } from "@/lib/contact";
 import { ArrowRight } from "lucide-react";
 
@@ -17,8 +12,6 @@ const nav = [
 ];
 
 export function SiteHeader() {
-  const [open, setOpen] = useState(false);
-
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
@@ -71,40 +64,35 @@ export function SiteHeader() {
           </Button>
         </div>
 
-        <button
-          type="button"
-          className="md:hidden p-2 -mr-2 text-foreground"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Abrir menu"
-          aria-expanded={open}
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
-      </div>
-
-      <div
-        className={cn(
-          "md:hidden overflow-hidden transition-[max-height,opacity] duration-300 border-t border-border/40",
-          open ? "max-h-80 opacity-100" : "max-h-0 opacity-0",
-        )}
-      >
-        <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-4">
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="text-sm text-muted-foreground hover:text-foreground"
-            >
-              {item.label}
-            </a>
-          ))}
-          <Button asChild size="sm" className="rounded-full w-full">
-            <a href="#contato" onClick={() => setOpen(false)}>
-              Falar com especialista
-            </a>
-          </Button>
-        </div>
+        <details className="group md:hidden relative">
+          <summary className="flex cursor-pointer list-none items-center rounded-md px-3 py-2 text-sm text-foreground marker:content-none [&::-webkit-details-marker]:hidden">
+            Menu
+          </summary>
+          <div className="absolute right-0 top-[calc(100%+0.75rem)] w-72 rounded-2xl border border-border/80 bg-background p-4 shadow-xl">
+            <nav className="flex flex-col gap-1" aria-label="Menu mobile">
+              {nav.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-xl px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+            <Button asChild size="sm" className="mt-4 w-full rounded-full">
+              <a
+                href={buildWhatsAppUrl(
+                  "Olá, quero solicitar uma cotação internacional.",
+                )}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Falar com especialista
+              </a>
+            </Button>
+          </div>
+        </details>
       </div>
     </header>
   );

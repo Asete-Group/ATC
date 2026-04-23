@@ -6,10 +6,9 @@ import { buildWhatsAppUrl } from "@/lib/contact";
 export function HeroSection() {
   return (
     <section className="relative isolate overflow-hidden pt-16">
-      {/* Background */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner.png-js6JePtkQQ59cB8ihIwJCdTVXVjGrE.jpeg"
+          src="/banner-atc.png"
           alt=""
           fill
           priority
@@ -43,7 +42,9 @@ export function HeroSection() {
               className="rounded-full px-6 h-12 bg-white text-foreground hover:bg-white/90"
             >
               <a
-                href={buildWhatsAppUrl("Olá, quero falar com um especialista da ATC.")}
+                href={buildWhatsAppUrl(
+                  "Olá, quero falar com um especialista da ATC.",
+                )}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2"

@@ -27,7 +27,7 @@ export function DifferentialsSection() {
         <div className="grid gap-10 sm:gap-16 lg:grid-cols-2 lg:gap-20 items-center">
           <div className="relative aspect-video sm:aspect-4/5 lg:aspect-auto lg:h-130 rounded-2xl overflow-hidden bg-primary">
             <Image
-              src="https://br.lexlatin.com/sites/default/files/2023-02/exporta%C3%A7%C3%B5es.png"
+              src="/container-ship.jpg"
               alt="Navio cargueiro com containers"
               fill
               className="object-cover"

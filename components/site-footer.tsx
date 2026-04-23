@@ -30,7 +30,7 @@ export function SiteFooter() {
             rel="noreferrer"
             className="hover:text-foreground transition-colors"
           >
-            WhatsApp
+            +55 47 9972-70458
           </a>
           <span className="mt-2 text-xs">
             © {new Date().getFullYear()} ATC China Brasil. Todos os direitos

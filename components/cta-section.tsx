@@ -8,7 +8,7 @@ export function CtaSection() {
     <section id="contato" className="relative isolate overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner.png-js6JePtkQQ59cB8ihIwJCdTVXVjGrE.jpeg"
+          src="/banner-atc.png"
           alt=""
           fill
           className="object-cover"
