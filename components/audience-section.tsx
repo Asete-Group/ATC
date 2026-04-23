@@ -11,10 +11,6 @@ const audiences = [
     title: "Importadores",
     desc: "Para negócios que querem reduzir risco, validar fornecedores e profissionalizar a cadeia internacional.",
   },
-  {
-    title: "Investidores",
-    desc: "Para projetos que exigem inteligência comercial, estrutura cross-border e suporte em operações estratégicas.",
-  },
 ];
 
 export function AudienceSection() {
@@ -26,11 +22,12 @@ export function AudienceSection() {
             Para quem é
           </span>
           <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
-            A ATC opera para empresas e projetos que tratam comércio internacional como estratégia
+            A ATC opera para empresas e projetos que tratam comércio
+            internacional como estratégia
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {audiences.map((item) => (
             <article
               key={item.title}

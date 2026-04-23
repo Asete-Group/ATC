@@ -18,11 +18,6 @@ const steps = [
     desc: "Identificamos fábricas qualificadas, realizamos due diligence e negociamos direto na origem, sem intermediários desnecessários.",
   },
   {
-    icon: Factory,
-    title: "Produção & Controle de Qualidade",
-    desc: "Acompanhamos produção, inspeção e conformidade para garantir padrão, segurança e previsibilidade.",
-  },
-  {
     icon: Ship,
     title: "Logística Internacional & Entrega Final",
     desc: "Gerenciamos frete, documentação, desembaraço e entrega até o destino final da operação.",
@@ -46,7 +41,7 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <ol className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <ol className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
           {steps.map((s, i) => (
             <li
               key={s.title}
@@ -71,7 +66,10 @@ export function HowItWorks() {
         </ol>
 
         <div className="mt-8 flex items-start gap-3 rounded-2xl border border-accent/20 bg-accent/8 p-5 text-sm text-foreground">
-          <BadgeCheck className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden />
+          <BadgeCheck
+            className="mt-0.5 size-4 shrink-0 text-accent"
+            aria-hidden
+          />
           <p className="leading-relaxed">
             Cada etapa é desenhada para dar visibilidade, controle e segurança
             comercial antes da tomada de decisão.
