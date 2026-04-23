@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { buildWhatsAppUrl } from "@/lib/contact";
 
 export function HeroSection() {
   return (
@@ -41,7 +42,12 @@ export function HeroSection() {
               size="lg"
               className="rounded-full px-6 h-12 bg-white text-foreground hover:bg-white/90"
             >
-              <a href="#contato" className="inline-flex items-center gap-2">
+              <a
+                href={buildWhatsAppUrl("Olá, quero falar com um especialista da ATC.")}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2"
+              >
                 Falar com especialista
                 <ArrowRight className="size-4" />
               </a>
@@ -60,7 +66,7 @@ export function HeroSection() {
             {[
               { v: "+1M", l: "toneladas exportadas" },
               { v: "+3.000", l: "clientes atendidos" },
-              { v: "+10K", l: "produtos movimentados" },
+              { v: "+8", l: "países com operações" },
             ].map((s) => (
               <div key={s.l} className="border-l border-white/20 pl-3 sm:pl-4">
                 <dt className="font-mono text-base sm:text-xl md:text-2xl font-semibold text-white">

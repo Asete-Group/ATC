@@ -1,7 +1,7 @@
 const stats = [
-  { value: "+1M", label: "toneladas exportadas" },
+  { value: "+1MM", label: "toneladas exportadas" },
   { value: "+3.000", label: "clientes atendidos" },
-  { value: "+10K", label: "produtos movimentados" },
+  { value: "+8", label: "países com operações" },
 ];
 
 export function StatsSection() {
@@ -16,15 +16,16 @@ export function StatsSection() {
             Autoridade
           </span>
           <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-balance">
-            Números que mostram nossa escala
+            Números que sustentam nossa operação
           </h2>
           <p className="mt-4 text-white/70 leading-relaxed">
-            Resultados construídos com base em operações reais e relacionamento
-            de longo prazo.
+            Resultados construídos em operações internacionais reais, com
+            capacidade de execução em diferentes mercados e níveis de
+            complexidade.
           </p>
         </div>
 
-        <dl className="mt-12 sm:mt-16 grid gap-8 sm:gap-10 sm:grid-cols-3">
+        <dl className="mt-12 sm:mt-16 grid gap-8 sm:gap-10 sm:grid-cols-2 xl:grid-cols-4">
           {stats.map((s) => (
             <div
               key={s.label}

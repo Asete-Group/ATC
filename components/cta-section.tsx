@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { buildWhatsAppUrl } from "@/lib/contact";
 
 export function CtaSection() {
   return (
@@ -31,29 +32,38 @@ export function CtaSection() {
           gratuito do seu projeto.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Button
             asChild
             size="lg"
-            className="rounded-full h-12 px-6 bg-accent text-accent-foreground hover:bg-accent/90"
+            className="w-full sm:w-auto rounded-full h-12 px-8 bg-accent text-accent-foreground hover:bg-accent/90"
           >
             <a
-              href="https://wa.me/5547997270458"
+              href={buildWhatsAppUrl(
+                "Olá, quero solicitar uma cotação internacional.",
+              )}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2"
             >
-              Falar no WhatsApp
+              Solicitar cotação internacional
               <ArrowRight className="size-4" />
             </a>
           </Button>
           <Button
             asChild
             size="lg"
-            variant="ghost"
-            className="rounded-full h-12 px-6 text-white hover:bg-white/10 hover:text-white"
+            className="w-full sm:w-auto rounded-full h-12 px-8 bg-white text-foreground hover:bg-white/90"
           >
-            <a href="mailto:contato@atcchinabrasil.com">Enviar e-mail</a>
+            <a
+              href={buildWhatsAppUrl(
+                "Olá, quero falar com um especialista da ATC.",
+              )}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Falar com especialista
+            </a>
           </Button>
         </div>
       </div>

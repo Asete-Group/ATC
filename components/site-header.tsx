@@ -1,26 +1,32 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { buildWhatsAppUrl } from "@/lib/contact";
+import { ArrowRight } from "lucide-react";
 
 const nav = [
   { href: "#como-funciona", label: "Como funciona" },
   { href: "#servicos", label: "Serviços" },
   { href: "#diferenciais", label: "Diferenciais" },
   { href: "#autoridade", label: "Resultados" },
-]
+];
 
 export function SiteHeader() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center" aria-label="ATC China Brasil">
+        <Link
+          href="/"
+          className="flex items-center"
+          aria-label="ATC China Brasil"
+        >
           <Image
             src="/atc-icon-black.svg"
             alt="ATC China Brasil"
@@ -34,7 +40,10 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8" aria-label="Menu principal">
+        <nav
+          className="hidden md:flex items-center gap-8"
+          aria-label="Menu principal"
+        >
           {nav.map((item) => (
             <a
               key={item.href}
@@ -48,7 +57,17 @@ export function SiteHeader() {
 
         <div className="hidden md:flex">
           <Button asChild size="sm" className="rounded-full px-5">
-            <a href="#contato">Falar com especialista</a>
+            <a
+              href={buildWhatsAppUrl(
+                "Olá, quero solicitar uma cotação internacional.",
+              )}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2"
+            >
+              Falar com especialista
+              <ArrowRight className="size-4" />
+            </a>
           </Button>
         </div>
 
@@ -88,5 +107,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }

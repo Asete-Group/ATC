@@ -3,20 +3,20 @@ import Image from "next/image";
 
 const items = [
   {
-    title: "Presença na China",
-    desc: "Equipe local com relacionamento direto com fornecedores homologados.",
+    title: "Presença internacional real",
+    desc: "Equipe e operações entre China, Brasil e hubs estratégicos internacionais.",
   },
   {
-    title: "Redução de custos",
-    desc: "Negociamos melhores preços e otimizamos cada etapa da cadeia.",
+    title: "Acesso direto à origem",
+    desc: "Relacionamento com fábricas e negociação sem intermediários.",
   },
   {
-    title: "Segurança na negociação",
-    desc: "Due diligence, contratos claros e proteção em todas as transações.",
+    title: "Segurança jurídica internacional",
+    desc: "Contratos estruturados no país de origem com proteção operacional.",
   },
   {
-    title: "Acompanhamento ponta a ponta",
-    desc: "Do primeiro contato à entrega final, com transparência total.",
+    title: "Capacidade de operações complexas",
+    desc: "Experiência com projetos industriais, commodities e contratos de grande escala.",
   },
 ];
 
@@ -50,11 +50,11 @@ export function DifferentialsSection() {
               Diferenciais
             </span>
             <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
-              Por que empresas escolhem a ATC
+              Estrutura global + inteligência operacional
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed max-w-lg">
-              Autoridade internacional, estrutura local e um processo desenhado
-              para reduzir riscos e aumentar margem.
+              A operação combina presença internacional, execução local e
+              governança comercial para reduzir risco em negociações globais.
             </p>
 
             <ul className="mt-8 space-y-5 sm:space-y-6">

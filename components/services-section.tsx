@@ -3,23 +3,23 @@ import { Container, Search, Users, Globe2 } from "lucide-react";
 const services = [
   {
     icon: Container,
-    title: "Importação completa",
-    desc: "Do pedido à entrega. Você foca no negócio, nós cuidamos do processo.",
+    title: "Importação Estratégica (End-to-End)",
+    desc: "Operação completa, do planejamento à entrega. Modelo chave na mão para empresas que buscam escala com segurança.",
   },
   {
     icon: Search,
-    title: "Sourcing na China",
-    desc: "Encontramos a fábrica certa, ao melhor custo, com auditoria.",
+    title: "Sourcing & Desenvolvimento na China",
+    desc: "Busca, validação e negociação direta com fábricas homologadas, incluindo auditoria, amostras e análise técnica.",
   },
   {
     icon: Users,
-    title: "Intermediação de negócios",
-    desc: "Negociação direta com fornecedores e suporte cultural.",
+    title: "Intermediação Internacional de Negócios",
+    desc: "Conectamos compradores e fornecedores globais com segurança jurídica e inteligência cultural.",
   },
   {
     icon: Globe2,
-    title: "Exportação",
-    desc: "Commodities e produtos brasileiros para o mercado internacional.",
+    title: "Exportação & Commodities",
+    desc: "Estruturação e execução de operações internacionais para produtos brasileiros.",
   },
 ];
 
@@ -33,12 +33,12 @@ export function ServicesSection() {
               Serviços
             </span>
             <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
-              O que entregamos para sua empresa
+              Soluções completas para operações internacionais
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm leading-relaxed">
-            Quatro frentes integradas para escalar sua operação internacional
-            com previsibilidade.
+            Atuação consultiva e operacional para empresas que precisam escalar
+            com inteligência, controle e execução internacional confiável.
           </p>
         </div>
 

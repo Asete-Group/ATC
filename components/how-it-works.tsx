@@ -1,20 +1,31 @@
-import { ClipboardList, Handshake, Ship } from "lucide-react";
+import {
+  BadgeCheck,
+  ClipboardList,
+  Factory,
+  Handshake,
+  Ship,
+} from "lucide-react";
 
 const steps = [
   {
     icon: ClipboardList,
-    title: "Diagnóstico",
-    desc: "Entendemos seu produto, volume, margem e objetivos. Você sai com um plano claro.",
+    title: "Diagnóstico Estratégico",
+    desc: "Analisamos produto, volume, margem, mercado e viabilidade da operação. Você recebe uma visão clara antes de investir.",
   },
   {
     icon: Handshake,
-    title: "Sourcing & Negociação",
-    desc: "Encontramos fábricas homologadas e negociamos diretamente na China.",
+    title: "Sourcing, Validação & Negociação",
+    desc: "Identificamos fábricas qualificadas, realizamos due diligence e negociamos direto na origem, sem intermediários desnecessários.",
+  },
+  {
+    icon: Factory,
+    title: "Produção & Controle de Qualidade",
+    desc: "Acompanhamos produção, inspeção e conformidade para garantir padrão, segurança e previsibilidade.",
   },
   {
     icon: Ship,
-    title: "Logística & Entrega",
-    desc: "Cuidamos de frete, alfândega e documentação até a porta da sua empresa.",
+    title: "Logística Internacional & Entrega Final",
+    desc: "Gerenciamos frete, documentação, desembaraço e entrega até o destino final da operação.",
   },
 ];
 
@@ -27,15 +38,15 @@ export function HowItWorks() {
             Como funciona
           </span>
           <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
-            Três passos para importar com segurança
+            Um processo estruturado para reduzir risco e maximizar resultado
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Um processo direto, sem burocracia desnecessária, com acompanhamento
-            ponta a ponta.
+            Operamos com um modelo validado internacionalmente, garantindo
+            controle em cada etapa da importação.
           </p>
         </div>
 
-        <ol className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 md:grid-cols-3">
+        <ol className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-4">
           {steps.map((s, i) => (
             <li
               key={s.title}
@@ -58,6 +69,14 @@ export function HowItWorks() {
             </li>
           ))}
         </ol>
+
+        <div className="mt-8 flex items-start gap-3 rounded-2xl border border-accent/20 bg-accent/8 p-5 text-sm text-foreground">
+          <BadgeCheck className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden />
+          <p className="leading-relaxed">
+            Cada etapa é desenhada para dar visibilidade, controle e segurança
+            comercial antes da tomada de decisão.
+          </p>
+        </div>
       </div>
     </section>
   );
