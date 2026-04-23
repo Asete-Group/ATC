@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { buildWhatsAppUrl } from "@/lib/contact";
 import { ArrowRight } from "lucide-react";
@@ -15,8 +14,8 @@ export function SiteHeader() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-        <Link
-          href="/"
+        <a
+          href="#inicio"
           className="flex items-center"
           aria-label="ATC China Brasil"
         >
@@ -31,7 +30,7 @@ export function SiteHeader() {
           <span className="hidden pl-5 sm:inline text-xs uppercase tracking-[0.2em] text-muted-foreground">
             China Brasil
           </span>
-        </Link>
+        </a>
 
         <nav
           className="hidden md:flex items-center gap-8"
