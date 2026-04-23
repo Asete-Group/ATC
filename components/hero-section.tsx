@@ -2,8 +2,14 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { buildWhatsAppUrl } from "@/lib/contact";
+import { copy, localizedHref, type Language } from "@/lib/i18n";
 
-export function HeroSection() {
+type HeroSectionProps = {
+  lang: Language;
+  content: (typeof copy)[Language]["hero"];
+}
+
+export function HeroSection({ lang, content }: HeroSectionProps) {
   return (
     <section id="inicio" className="relative isolate overflow-hidden pt-16">
       <div className="absolute inset-0 -z-10">
@@ -27,12 +33,11 @@ export function HeroSection() {
       <div className="mx-auto max-w-6xl px-6 pt-14 pb-20 sm:pt-24 sm:pb-28 md:pt-36 md:pb-40">
         <div className="max-w-3xl">
           <h1 className="mt-4 text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-white text-balance">
-            Soluções em importação, exportação e sourcing internacional
+            {content.title}
           </h1>
 
           <p className="mt-5 text-sm sm:text-base md:text-lg text-white/75 max-w-xl leading-relaxed text-pretty">
-            Conectamos sua empresa diretamente às melhores fábricas do mundo,
-            com segurança, estratégia e presença local na China.
+            {content.description}
           </p>
 
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3">
@@ -42,14 +47,12 @@ export function HeroSection() {
               className="rounded-full px-6 h-12 bg-white text-foreground hover:bg-white/90"
             >
               <a
-                href={buildWhatsAppUrl(
-                  "Olá, quero falar com um especialista da ATC.",
-                )}
+                href={buildWhatsAppUrl(content.primaryCtaMessage)}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2"
               >
-                Falar com especialista
+                {content.primaryCtaLabel}
                 <ArrowRight className="size-4" />
               </a>
             </Button>
@@ -59,22 +62,20 @@ export function HeroSection() {
               variant="ghost"
               className="rounded-full px-6 h-12 text-white hover:bg-white/10 hover:text-white"
             >
-              <a href="#como-funciona">Como funciona</a>
+              <a href={localizedHref(lang, "#como-funciona")}>
+                {content.secondaryCtaLabel}
+              </a>
             </Button>
           </div>
 
           <dl className="mt-10 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
-            {[
-              { v: "+1M", l: "toneladas exportadas" },
-              { v: "+3.000", l: "clientes atendidos" },
-              { v: "+8", l: "países com operações" },
-            ].map((s) => (
-              <div key={s.l} className="border-l border-white/20 pl-3 sm:pl-4">
+            {content.stats.map((stat) => (
+              <div key={stat.label} className="border-l border-white/20 pl-3 sm:pl-4">
                 <dt className="font-mono text-base sm:text-xl md:text-2xl font-semibold text-white">
-                  {s.v}
+                  {stat.value}
                 </dt>
                 <dd className="text-[10px] sm:text-xs text-white/60 mt-1 leading-snug">
-                  {s.l}
+                  {stat.label}
                 </dd>
               </div>
             ))}

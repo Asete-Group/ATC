@@ -1,26 +1,12 @@
 import { Check } from "lucide-react";
 import Image from "next/image";
+import { copy, type Language } from "@/lib/i18n";
 
-const items = [
-  {
-    title: "Presença internacional real",
-    desc: "Equipe e operações entre China, Brasil e hubs estratégicos internacionais.",
-  },
-  {
-    title: "Acesso direto à origem",
-    desc: "Relacionamento com fábricas e negociação sem intermediários.",
-  },
-  {
-    title: "Segurança jurídica internacional",
-    desc: "Contratos estruturados no país de origem com proteção operacional.",
-  },
-  {
-    title: "Capacidade de operações complexas",
-    desc: "Experiência com projetos industriais, commodities e contratos de grande escala.",
-  },
-];
+type DifferentialsSectionProps = {
+  content: (typeof copy)[Language]["differentials"];
+}
 
-export function DifferentialsSection() {
+export function DifferentialsSection({ content }: DifferentialsSectionProps) {
   return (
     <section id="diferenciais" className="py-16 md:py-32 bg-background">
       <div className="mx-auto max-w-6xl px-6">
@@ -28,7 +14,7 @@ export function DifferentialsSection() {
           <div className="relative aspect-video sm:aspect-4/5 lg:aspect-auto lg:h-130 rounded-2xl overflow-hidden bg-primary">
             <Image
               src="/porto.webp"
-              alt="Navio cargueiro com containers"
+              alt={content.imageAlt}
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -47,26 +33,25 @@ export function DifferentialsSection() {
 
           <div>
             <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
-              Diferenciais
+              {content.eyebrow}
             </span>
             <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
-              Estrutura global + inteligência operacional
+              {content.title}
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed max-w-lg">
-              A operação combina presença internacional, execução local e
-              governança comercial para reduzir risco em negociações globais.
+              {content.description}
             </p>
 
             <ul className="mt-8 space-y-5 sm:space-y-6">
-              {items.map((it) => (
-                <li key={it.title} className="flex gap-4">
+              {content.items.map((item) => (
+                <li key={item.title} className="flex gap-4">
                   <span className="mt-1 inline-flex size-6 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                     <Check className="size-3.5" aria-hidden />
                   </span>
                   <div>
-                    <h3 className="font-medium text-foreground">{it.title}</h3>
+                    <h3 className="font-medium text-foreground">{item.title}</h3>
                     <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-                      {it.desc}
+                      {item.desc}
                     </p>
                   </div>
                 </li>

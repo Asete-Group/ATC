@@ -1,6 +1,11 @@
 import Image from "next/image";
+import { copy, type Language } from "@/lib/i18n";
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  content: (typeof copy)[Language]["footer"];
+}
+
+export function SiteFooter({ content }: SiteFooterProps) {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-6xl px-6 py-10 sm:py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
@@ -13,7 +18,7 @@ export function SiteFooter() {
             className="h-7 w-auto"
           />
           <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
-            Soluções em importação, exportação e sourcing internacional.
+            {content.description}
           </p>
         </div>
 
@@ -33,8 +38,7 @@ export function SiteFooter() {
             +55 47 9972-70458
           </a>
           <span className="mt-2 text-xs">
-            © {new Date().getFullYear()} ATC China Brasil. Todos os direitos
-            reservados.
+            © {new Date().getFullYear()} ATC China Brasil. {content.rights}
           </span>
         </div>
       </div>
