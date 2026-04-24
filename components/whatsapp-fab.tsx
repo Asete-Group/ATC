@@ -1,10 +1,10 @@
-import { MessageCircle } from "lucide-react"
+import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5547997270458"
+const WHATSAPP_URL = "https://wa.me/5547996135427";
 
 type WhatsAppFabProps = {
-  ariaLabel: string
-}
+  ariaLabel: string;
+};
 
 export function WhatsAppFab({ ariaLabel }: WhatsAppFabProps) {
   return (
@@ -18,5 +18,5 @@ export function WhatsAppFab({ ariaLabel }: WhatsAppFabProps) {
       <MessageCircle className="size-7" strokeWidth={2.2} />
       <span className="sr-only">{ariaLabel}</span>
     </a>
-  )
+  );
 }
