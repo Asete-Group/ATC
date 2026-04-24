@@ -2,14 +2,25 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { buildWhatsAppUrl } from "@/lib/contact";
 import { ArrowRight } from "lucide-react";
-import { copy, languages, localizedHref, type Language } from "@/lib/i18n";
+import {
+  copy,
+  languages,
+  localizedHref,
+  localizedPath,
+  type Language,
+} from "@/lib/i18n";
 
 type SiteHeaderProps = {
   lang: Language;
   content: (typeof copy)[Language]["header"];
-}
+};
 
 export function SiteHeader({ lang, content }: SiteHeaderProps) {
+  const resolveNavHref = (href: string) =>
+    href.startsWith("/")
+      ? localizedPath(lang, href)
+      : localizedHref(lang, href);
+
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
@@ -26,9 +37,9 @@ export function SiteHeader({ lang, content }: SiteHeaderProps) {
             priority
             className="h-6 w-auto"
           />
-          <span className="hidden pl-5 sm:inline text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          {/*<span className="hidden pl-5 sm:inline text-xs uppercase tracking-[0.2em] text-muted-foreground">
             {content.brandLabel}
-          </span>
+          </span>*/}
         </a>
 
         <nav
@@ -38,7 +49,7 @@ export function SiteHeader({ lang, content }: SiteHeaderProps) {
           {content.nav.map((item) => (
             <a
               key={item.href}
-              href={localizedHref(lang, item.href)}
+              href={resolveNavHref(item.href)}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {item.label}
@@ -85,7 +96,7 @@ export function SiteHeader({ lang, content }: SiteHeaderProps) {
               {content.nav.map((item) => (
                 <a
                   key={item.href}
-                  href={localizedHref(lang, item.href)}
+                  href={resolveNavHref(item.href)}
                   className="rounded-xl px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                 >
                   {item.label}

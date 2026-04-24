@@ -5,11 +5,11 @@ const serviceIcons = [Container, Search, Users, Globe2];
 
 type ServicesSectionProps = {
   content: (typeof copy)[Language]["services"];
-}
+};
 
 export function ServicesSection({ content }: ServicesSectionProps) {
   return (
-    <section id="servicos" className="py-16 md:py-32 bg-secondary/40">
+    <section id="servicos" className="py-16 md:py-32 bg-secondary/35">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div className="max-w-2xl">

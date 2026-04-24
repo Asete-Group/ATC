@@ -10,6 +10,10 @@ export function localizedHref(lang: Language, anchor = "") {
   return `/?lang=${lang}${anchor}`;
 }
 
+export function localizedPath(lang: Language, path: string) {
+  return `${path}?lang=${lang}`;
+}
+
 export const copy = {
   pt: {
     languageName: "Português",
@@ -23,6 +27,7 @@ export const copy = {
         { href: "#servicos", label: "Serviços" },
         { href: "#diferenciais", label: "Diferenciais" },
         { href: "#autoridade", label: "Resultados" },
+        { href: "/catalogo", label: "Catálogo" },
       ],
       ctaLabel: "Falar com especialista",
       ctaMessage: "Olá, quero solicitar uma cotação internacional.",
@@ -244,6 +249,7 @@ export const copy = {
         { href: "#servicos", label: "Services" },
         { href: "#diferenciais", label: "Differentials" },
         { href: "#autoridade", label: "Results" },
+        { href: "/catalogo", label: "Catalog" },
       ],
       ctaLabel: "Talk to a specialist",
       ctaMessage: "Hello, I would like to request an international quotation.",
@@ -464,6 +470,7 @@ export const copy = {
         { href: "#servicos", label: "服务" },
         { href: "#diferenciais", label: "优势" },
         { href: "#autoridade", label: "成果" },
+        { href: "/catalogo", label: "目录" },
       ],
       ctaLabel: "联系专家",
       ctaMessage: "您好，我想申请一份国际报价。",
