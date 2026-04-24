@@ -3,7 +3,7 @@ import { copy, type Language } from "@/lib/i18n";
 
 type SiteFooterProps = {
   content: (typeof copy)[Language]["footer"];
-}
+};
 
 export function SiteFooter({ content }: SiteFooterProps) {
   return (
@@ -28,14 +28,6 @@ export function SiteFooter({ content }: SiteFooterProps) {
             className="hover:text-foreground transition-colors"
           >
             contato@atcchinabrasil.com
-          </a>
-          <a
-            href="https://wa.me/5547997270458"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-foreground transition-colors"
-          >
-            +55 47 9972-70458
           </a>
           <span className="mt-2 text-xs">
             © {new Date().getFullYear()} ATC China Brasil. {content.rights}

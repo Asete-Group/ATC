@@ -1,13 +1,13 @@
-export const languages = ["pt", "en", "zh"] as const
+export const languages = ["pt", "en", "zh"] as const;
 
-export type Language = (typeof languages)[number]
+export type Language = (typeof languages)[number];
 
 export function getLanguage(value?: string): Language {
-  return languages.includes(value as Language) ? (value as Language) : "pt"
+  return languages.includes(value as Language) ? (value as Language) : "pt";
 }
 
 export function localizedHref(lang: Language, anchor = "") {
-  return `/?lang=${lang}${anchor}`
+  return `/?lang=${lang}${anchor}`;
 }
 
 export const copy = {
@@ -28,9 +28,10 @@ export const copy = {
       ctaMessage: "Olá, quero solicitar uma cotação internacional.",
     },
     hero: {
-      title: "Soluções em importação, exportação e sourcing internacional",
+      title:
+        "Soluções estratégicas que conectam você ao comércio internacional",
       description:
-        "Conectamos sua empresa diretamente às melhores fábricas do mundo, com segurança, estratégia e presença local na China.",
+        "Conectamos sua empresa às principais indústrias globais, com estratégia, segurança e atuação local na China.",
       primaryCtaLabel: "Falar com especialista",
       primaryCtaMessage: "Olá, quero falar com um especialista da ATC.",
       secondaryCtaLabel: "Como funciona",
@@ -88,19 +89,22 @@ export const copy = {
     },
     operationModels: {
       eyebrow: "Modelos de operação",
-      title: "Estrutura comercial adaptada ao nível de suporte que sua operação exige",
+      title:
+        "Estrutura comercial adaptada ao nível de suporte que sua operação exige",
       description:
         "Atuamos tanto como parceiro estratégico na intermediação quanto na execução integral da importação, conforme a maturidade e o objetivo do seu negócio.",
       items: [
         {
           title: "Consultoria + intermediação",
           desc: "Estruturamos a operação, validamos fornecedores e conduzimos a negociação para empresas que já possuem time interno e precisam de inteligência local para executar com segurança.",
-          highlight: "Ideal para quem quer manter controle interno com suporte estratégico.",
+          highlight:
+            "Ideal para quem quer manter controle interno com suporte estratégico.",
         },
         {
           title: "Importação completa (chave na mão)",
           desc: "Assumimos o fluxo completo da operação internacional, do planejamento ao destino final, com gestão integrada de sourcing, produção, qualidade, logística e documentação.",
-          highlight: "Modelo indicado para empresas que buscam escala com previsibilidade operacional.",
+          highlight:
+            "Modelo indicado para empresas que buscam escala com previsibilidade operacional.",
         },
       ],
     },
@@ -140,8 +144,8 @@ export const copy = {
           desc: "Coordenação internacional para atendimento de demanda industrial com critérios técnicos, validação de fornecedor e controle de risco operacional.",
         },
         {
-          title: "Exportação de proteína",
-          desc: "Estruturação de operação internacional para produto brasileiro, com alinhamento comercial, documentação e execução logística de ponta a ponta.",
+          title: "Exportação de commodities",
+          desc: "Estruturação de operações internacionais para produtos brasileiros, com alinhamento comercial, documentação e execução logística ponta a ponta.",
         },
         {
           title: "Operações industriais complexas",
@@ -190,12 +194,14 @@ export const copy = {
             "Não. A operação tem forte presença na China, mas também estruturamos exportações brasileiras e intermediações internacionais em diferentes mercados.",
         },
         {
-          question: "Vocês podem operar desde a busca do fornecedor até a entrega final?",
+          question:
+            "Vocês podem operar desde a busca do fornecedor até a entrega final?",
           answer:
             "Sim. No modelo chave na mão, conduzimos planejamento, sourcing, validação, negociação, produção, qualidade, logística, desembaraço e entrega.",
         },
         {
-          question: "A empresa atende projetos industriais e operações complexas?",
+          question:
+            "A empresa atende projetos industriais e operações complexas?",
           answer:
             "Sim. A atuação inclui operações industriais, commodities e projetos com exigência técnica, documental e contratual mais elevada.",
         },
@@ -221,7 +227,8 @@ export const copy = {
       specialistMessage: "Olá, quero falar com um especialista da ATC.",
     },
     footer: {
-      description: "Soluções em importação, exportação e sourcing internacional.",
+      description:
+        "Soluções em importação, exportação e sourcing internacional.",
       rights: "Todos os direitos reservados.",
     },
   },
@@ -302,19 +309,22 @@ export const copy = {
     },
     operationModels: {
       eyebrow: "Operating models",
-      title: "Commercial structure adapted to the level of support your operation requires",
+      title:
+        "Commercial structure adapted to the level of support your operation requires",
       description:
         "We act both as a strategic intermediation partner and as the operator for full import execution, according to your company's maturity and goals.",
       items: [
         {
           title: "Consulting + intermediation",
           desc: "We structure the operation, validate suppliers and lead negotiations for companies that already have an internal team and need local intelligence to execute safely.",
-          highlight: "Ideal for companies that want to keep internal control with strategic support.",
+          highlight:
+            "Ideal for companies that want to keep internal control with strategic support.",
         },
         {
           title: "Full importing (turnkey)",
           desc: "We take responsibility for the entire international flow, from planning to final destination, with integrated management of sourcing, production, quality, logistics and documentation.",
-          highlight: "Recommended for companies seeking scale with operational predictability.",
+          highlight:
+            "Recommended for companies seeking scale with operational predictability.",
         },
       ],
     },
@@ -354,8 +364,8 @@ export const copy = {
           desc: "International coordination to serve industrial demand with technical criteria, supplier validation and operational risk control.",
         },
         {
-          title: "Protein export operation",
-          desc: "Structuring an international operation for a Brazilian product, aligning commercial, documentation and end-to-end logistics execution.",
+          title: "Commodity Export",
+          desc: "Structuring international operations for Brazilian products, including commercial alignment, documentation, and end-to-end logistics execution.",
         },
         {
           title: "Complex industrial operations",
@@ -404,12 +414,14 @@ export const copy = {
             "No. We have a strong presence in China, but we also structure Brazilian exports and international intermediation in different markets.",
         },
         {
-          question: "Can you handle everything from supplier search to final delivery?",
+          question:
+            "Can you handle everything from supplier search to final delivery?",
           answer:
             "Yes. In the turnkey model, we lead planning, sourcing, validation, negotiation, production, quality, logistics, customs clearance and delivery.",
         },
         {
-          question: "Does the company handle industrial and complex operations?",
+          question:
+            "Does the company handle industrial and complex operations?",
           answer:
             "Yes. Our work includes industrial operations, commodities and projects with higher technical, documentary and contractual requirements.",
         },
@@ -430,7 +442,8 @@ export const copy = {
       description:
         "Talk to an ATC China Brazil specialist and receive a free diagnosis for your project.",
       quoteLabel: "Request international quote",
-      quoteMessage: "Hello, I would like to request an international quotation.",
+      quoteMessage:
+        "Hello, I would like to request an international quotation.",
       specialistLabel: "Talk to a specialist",
       specialistMessage: "Hello, I would like to talk to an ATC specialist.",
     },
@@ -487,8 +500,7 @@ export const copy = {
           desc: "我们负责运费、文件、清关以及交付到最终目的地。",
         },
       ],
-      highlight:
-        "每一个阶段都旨在在决策之前提供透明度、控制力和商业安全。",
+      highlight: "每一个阶段都旨在在决策之前提供透明度、控制力和商业安全。",
     },
     services: {
       eyebrow: "服务",
@@ -560,8 +572,7 @@ export const copy = {
     cases: {
       eyebrow: "案例与项目",
       title: "具备真实背书的国际业务实战经验",
-      description:
-        "覆盖工业项目、结构化出口以及需要精确执行的国际业务。",
+      description: "覆盖工业项目、结构化出口以及需要精确执行的国际业务。",
       items: [
         {
           title: "汽车工业项目",
@@ -587,8 +598,8 @@ export const copy = {
           desc: "适合需要可靠国际供应、技术标准化和运营规模的企业。",
         },
         {
-          title: "分销商",
-          desc: "适合追求利润空间、稳定供给和直接原产地资源的业务。",
+          title: "大宗商品出口",
+          desc: "为巴西产品搭建国际业务运营架构，涵盖商务对接、文件准备以及端到端物流执行。",
         },
         {
           title: "进口商",
@@ -640,8 +651,7 @@ export const copy = {
     },
     cta: {
       title: "准备好更安全、更高效地开展进口了吗？",
-      description:
-        "与 ATC China Brazil 专家沟通，免费获得您的项目诊断。",
+      description: "与 ATC China Brazil 专家沟通，免费获得您的项目诊断。",
       quoteLabel: "申请国际报价",
       quoteMessage: "您好，我想申请一份国际报价。",
       specialistLabel: "联系专家",
@@ -652,4 +662,4 @@ export const copy = {
       rights: "版权所有。",
     },
   },
-} as const
+} as const;
