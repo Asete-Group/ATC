@@ -13,14 +13,7 @@ export function CatalogSection({ lang }: CatalogSectionProps) {
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(90,209,255,0.2),_transparent_28%),linear-gradient(180deg,_rgba(8,24,48,0.04),_transparent_18%),linear-gradient(135deg,_#f8fbff_0%,_#eef4fa_100%)]">
       <div className="mx-auto max-w-6xl px-6 pt-28 pb-16 sm:pt-36 sm:pb-20">
-        <Button asChild variant="outline" className="rounded-full bg-white/80 backdrop-blur">
-          <a href={`/?lang=${lang}#inicio`} className="inline-flex items-center gap-2">
-            <ArrowLeft className="size-4" />
-            {content.backLabel}
-          </a>
-        </Button>
-
-        <div className="mt-8 max-w-3xl">
+        <div className="max-w-3xl">
           <span className="inline-flex rounded-full border border-accent/30 bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
             {content.eyebrow}
           </span>
