@@ -6,6 +6,7 @@ import { OperationModelsSection } from "@/components/operation-models-section";
 import { DifferentialsSection } from "@/components/differentials-section";
 import { CasesSection } from "@/components/cases-section";
 import { AudienceSection } from "@/components/audience-section";
+import { AuthorityMediaSection } from "@/components/authority-media-section";
 import { StatsSection } from "@/components/stats-section";
 import { FaqSection } from "@/components/faq-section";
 import { CtaSection } from "@/components/cta-section";
@@ -33,6 +34,7 @@ export default async function Page({ searchParams }: PageProps) {
         <ServicesSection content={content.services} />
         <DifferentialsSection content={content.differentials} />
         <CasesSection content={content.cases} />
+        <AuthorityMediaSection content={content.authorityMedia} />
         <AudienceSection content={content.audience} />
         <StatsSection content={content.stats} />
         <FaqSection content={content.faq} />

@@ -2,12 +2,12 @@ import { copy, type Language } from "@/lib/i18n";
 
 type StatsSectionProps = {
   content: (typeof copy)[Language]["stats"];
-}
+};
 
 export function StatsSection({ content }: StatsSectionProps) {
   return (
     <section
-      id="autoridade"
+      id="estatisticas"
       className="py-16 md:py-32 bg-primary text-primary-foreground"
     >
       <div className="mx-auto max-w-6xl px-6">

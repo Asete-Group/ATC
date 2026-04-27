@@ -6,8 +6,10 @@ type AudienceSectionProps = {
 
 export function AudienceSection({ content }: AudienceSectionProps) {
   return (
-    <section className="py-16 md:py-32 bg-background">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="relative overflow-hidden py-16 md:py-32 bg-[linear-gradient(180deg,var(--background),hsl(from_var(--primary)_h_s_l_/_0.055)_42%,hsl(from_var(--accent)_h_s_l_/_0.04))]">
+      <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" aria-hidden />
+      <div className="absolute left-8 top-20 h-40 w-40 rounded-full border border-primary/10 bg-primary/5 blur-2xl" aria-hidden />
+      <div className="relative mx-auto max-w-6xl px-6">
         <div className="max-w-3xl">
           <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
             {content.eyebrow}
@@ -21,7 +23,7 @@ export function AudienceSection({ content }: AudienceSectionProps) {
           {content.items.map((item) => (
             <article
               key={item.title}
-              className="rounded-3xl border border-border bg-card p-6"
+              className="rounded-3xl border border-primary/10 bg-background/90 p-6 shadow-sm shadow-primary/5"
             >
               <p className="text-xs font-mono uppercase tracking-[0.18em] text-accent">
                 {content.profileLabel}

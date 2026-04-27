@@ -140,3 +140,32 @@
     @apply tracking-tight;
   }
 }
+
+@layer utilities {
+  .media-marquee {
+    animation: media-marquee 38s linear infinite;
+  }
+
+  .media-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes media-marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .media-marquee {
+      animation: none;
+      flex-wrap: wrap;
+      transform: none;
+      width: auto;
+    }
+  }
+}

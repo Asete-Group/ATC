@@ -26,7 +26,7 @@ export const copy = {
         { href: "#como-funciona", label: "Como funciona" },
         { href: "#servicos", label: "Serviços" },
         { href: "#diferenciais", label: "Diferenciais" },
-        { href: "#autoridade", label: "Resultados" },
+        { href: "#estatisticas", label: "Resultados" },
         { href: "/catalogo", label: "Catálogo" },
       ],
       ctaLabel: "Falar com especialista",
@@ -41,7 +41,7 @@ export const copy = {
       primaryCtaMessage: "Olá, quero falar com um especialista da ATC.",
       secondaryCtaLabel: "Como funciona",
       stats: [
-        { value: "+1M", label: "toneladas exportadas" },
+        { value: "+1MM", label: "toneladas exportadas" },
         { value: "+3.000", label: "clientes atendidos" },
         { value: "+8", label: "países com operações" },
       ],
@@ -178,6 +178,14 @@ export const copy = {
         },
       ],
     },
+    authorityMedia: {
+      eyebrow: "Em campo",
+      title: "Operação real, presença internacional e execução comprovada",
+      description:
+        "Registros de operações, visitas técnicas e acompanhamento direto em ambientes industriais e logísticos.",
+      videoLabel: "Operação em movimento",
+      imageAlt: "Registro de operação internacional da ATC",
+    },
     stats: {
       eyebrow: "Autoridade",
       title: "Números que sustentam nossa operação",
@@ -248,7 +256,7 @@ export const copy = {
         { href: "#como-funciona", label: "How it works" },
         { href: "#servicos", label: "Services" },
         { href: "#diferenciais", label: "Differentials" },
-        { href: "#autoridade", label: "Results" },
+        { href: "#estatisticas", label: "Results" },
         { href: "/catalogo", label: "Catalog" },
       ],
       ctaLabel: "Talk to a specialist",
@@ -262,7 +270,7 @@ export const copy = {
       primaryCtaMessage: "Hello, I would like to talk to an ATC specialist.",
       secondaryCtaLabel: "How it works",
       stats: [
-        { value: "+1M", label: "tons exported" },
+        { value: "+1MM", label: "tons exported" },
         { value: "+3,000", label: "clients served" },
         { value: "+8", label: "countries with operations" },
       ],
@@ -399,6 +407,14 @@ export const copy = {
         },
       ],
     },
+    authorityMedia: {
+      eyebrow: "In the field",
+      title: "Real operations, international presence and proven execution",
+      description:
+        "Records from operations, technical visits and direct follow-up in industrial and logistics environments.",
+      videoLabel: "Operation in motion",
+      imageAlt: "ATC international operation record",
+    },
     stats: {
       eyebrow: "Authority",
       title: "Numbers that support our operation",
@@ -469,7 +485,7 @@ export const copy = {
         { href: "#como-funciona", label: "运作方式" },
         { href: "#servicos", label: "服务" },
         { href: "#diferenciais", label: "优势" },
-        { href: "#autoridade", label: "成果" },
+        { href: "#estatisticas", label: "成果" },
         { href: "/catalogo", label: "目录" },
       ],
       ctaLabel: "联系专家",
@@ -483,7 +499,7 @@ export const copy = {
       primaryCtaMessage: "您好，我想与 ATC 专家沟通。",
       secondaryCtaLabel: "运作方式",
       stats: [
-        { value: "+1M", label: "出口吨数" },
+        { value: "+1MM", label: "出口吨数" },
         { value: "+3,000", label: "服务客户" },
         { value: "+8", label: "业务覆盖国家" },
       ],
@@ -613,6 +629,13 @@ export const copy = {
           desc: "适合希望降低风险、验证供应商并提升国际供应链专业度的企业。",
         },
       ],
+    },
+    authorityMedia: {
+      eyebrow: "现场实力",
+      title: "真实业务、国际布局与经过验证的执行能力",
+      description: "来自业务现场、技术拜访以及工业和物流环境直接跟进的记录。",
+      videoLabel: "业务动态",
+      imageAlt: "ATC 国际业务记录",
     },
     stats: {
       eyebrow: "实力",
