@@ -43,7 +43,7 @@ export const copy = {
       stats: [
         { value: "+1MM", label: "toneladas exportadas" },
         { value: "+3.000", label: "clientes atendidos" },
-        { value: "+8", label: "países com operações" },
+        { value: "+R$1B", label: "em valores negociados" },
       ],
     },
     howItWorks: {
@@ -194,7 +194,7 @@ export const copy = {
       items: [
         { value: "+1MM", label: "toneladas exportadas" },
         { value: "+3.000", label: "clientes atendidos" },
-        { value: "+8", label: "países com operações" },
+        { value: "+R$1B", label: "em valores negociados" },
       ],
     },
     faq: {
@@ -271,8 +271,8 @@ export const copy = {
       secondaryCtaLabel: "How it works",
       stats: [
         { value: "+1MM", label: "tons exported" },
-        { value: "+3,000", label: "clients served" },
-        { value: "+8", label: "countries with operations" },
+        { value: "+3.000", label: "clients served" },
+        { value: "+R$1B", label: "in negotiated value" },
       ],
     },
     howItWorks: {
@@ -422,8 +422,8 @@ export const copy = {
         "Results built on real international operations, with execution capacity across different markets and levels of complexity.",
       items: [
         { value: "+1MM", label: "tons exported" },
-        { value: "+3,000", label: "clients served" },
-        { value: "+8", label: "countries with operations" },
+        { value: "+3.000", label: "clients served" },
+        { value: "+R$1B", label: "in negotiated value" },
       ],
     },
     faq: {
@@ -500,8 +500,8 @@ export const copy = {
       secondaryCtaLabel: "运作方式",
       stats: [
         { value: "+1MM", label: "出口吨数" },
-        { value: "+3,000", label: "服务客户" },
-        { value: "+8", label: "业务覆盖国家" },
+        { value: "+3.000", label: "服务客户" },
+        { value: "+R$1B", label: "交易金额" },
       ],
     },
     howItWorks: {
@@ -644,8 +644,8 @@ export const copy = {
         "成果来自真实国际业务执行，覆盖不同市场和不同复杂程度的项目。",
       items: [
         { value: "+1MM", label: "出口吨数" },
-        { value: "+3,000", label: "服务客户" },
-        { value: "+8", label: "业务覆盖国家" },
+        { value: "+3.000", label: "服务客户" },
+        { value: "+R$1B", label: "交易金额" },
       ],
     },
     faq: {

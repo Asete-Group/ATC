@@ -5,13 +5,19 @@ const caseIcons = [Factory, Truck, ShieldCheck];
 
 type CasesSectionProps = {
   content: (typeof copy)[Language]["cases"];
-}
+};
 
 export function CasesSection({ content }: CasesSectionProps) {
   return (
-    <section className="relative overflow-hidden py-16 md:py-32 bg-[linear-gradient(180deg,hsl(from_var(--accent)_h_s_l_/_0.05),var(--secondary)_58%,hsl(from_var(--primary)_h_s_l_/_0.04))]">
-      <div className="absolute right-0 top-1/4 h-36 w-1 bg-primary/55" aria-hidden />
-      <div className="absolute -right-20 bottom-12 h-72 w-72 rounded-full border border-accent/15 bg-accent/8 blur-3xl" aria-hidden />
+    <section className="relative overflow-hidden py-16 md:py-32 bg-primary/5">
+      <div
+        className="absolute right-0 top-1/4 h-36 w-1 bg-primary/55"
+        aria-hidden
+      />
+      <div
+        className="absolute -right-20 bottom-12 h-72 w-72 rounded-full border border-accent/15 bg-accent/8 blur-3xl"
+        aria-hidden
+      />
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl">

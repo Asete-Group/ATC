@@ -1,5 +1,3 @@
-import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import type { Language } from "@/lib/i18n";
 import { productCatalog } from "@/lib/product-catalog";
 
@@ -35,35 +33,24 @@ export function CatalogSection({ lang }: CatalogSectionProps) {
                 <h2 className="text-2xl font-semibold text-primary sm:text-3xl">
                   {category.title}
                 </h2>
+                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                  {category.tagline}
+                </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
                   {category.description}
                 </p>
               </div>
 
-              <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {category.products.map((product) => (
-                  <article
-                    key={product.title}
-                    className="group overflow-hidden rounded-[1.5rem] border border-border/70 bg-background shadow-sm transition-transform duration-300 hover:-translate-y-1"
+                  <li
+                    key={product}
+                    className="flex min-h-14 items-center rounded-xl border border-border/70 bg-background/70 px-4 py-3 text-sm font-medium leading-snug text-foreground shadow-sm"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      <img
-                        src={product.image}
-                        alt={product.imageAlt}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-5">
-                      <h3 className="text-lg font-semibold text-foreground">
-                        {product.title}
-                      </h3>
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                        {product.description}
-                      </p>
-                    </div>
-                  </article>
+                    {product}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </section>
           ))}
         </div>

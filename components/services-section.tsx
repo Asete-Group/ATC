@@ -11,10 +11,16 @@ export function ServicesSection({ content }: ServicesSectionProps) {
   return (
     <section
       id="servicos"
-      className="relative overflow-hidden py-16 md:py-32 bg-[linear-gradient(135deg,hsl(from_var(--primary)_h_s_l_/_0.06),var(--secondary)_55%,hsl(from_var(--accent)_h_s_l_/_0.055))]"
+      className="relative overflow-hidden py-16 md:py-32 bg-primary/5"
     >
-      <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent" aria-hidden />
-      <div className="absolute -left-24 bottom-10 h-64 w-64 rounded-full border border-primary/10 bg-primary/5 blur-3xl" aria-hidden />
+      <div
+        className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent"
+        aria-hidden
+      />
+      <div
+        className="absolute -left-24 bottom-10 h-64 w-64 rounded-full border border-primary/10 bg-primary/5 blur-3xl"
+        aria-hidden
+      />
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div className="max-w-2xl">

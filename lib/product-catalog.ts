@@ -1,17 +1,11 @@
 import type { Language } from "@/lib/i18n";
 
-type Product = {
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-};
-
 type Category = {
   id: string;
   title: string;
+  tagline: string;
   description: string;
-  products: Product[];
+  products: string[];
 };
 
 type CatalogContent = {
@@ -22,31 +16,6 @@ type CatalogContent = {
   categories: Category[];
 };
 
-function createProductImage(label: string, background: string, accent: string) {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
-      <defs>
-        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="${background}" />
-          <stop offset="100%" stop-color="#081830" />
-        </linearGradient>
-      </defs>
-      <rect width="800" height="520" rx="36" fill="url(#bg)" />
-      <circle cx="130" cy="110" r="72" fill="${accent}" opacity="0.28" />
-      <circle cx="675" cy="410" r="112" fill="${accent}" opacity="0.18" />
-      <rect x="72" y="88" width="656" height="344" rx="28" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.22" />
-      <text x="72" y="380" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">
-        ${label}
-      </text>
-      <text x="72" y="428" fill="white" fill-opacity="0.7" font-family="Arial, Helvetica, sans-serif" font-size="26">
-        ATC Product Catalog
-      </text>
-    </svg>
-  `;
-
-  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
-}
-
 export const productCatalog: Record<Language, CatalogContent> = {
   pt: {
     eyebrow: "Catálogo",
@@ -56,78 +25,62 @@ export const productCatalog: Record<Language, CatalogContent> = {
     backLabel: "Voltar para o site",
     categories: [
       {
-        id: "eletronicos",
-        title: "Eletrônicos",
-        description: "Itens com alta demanda e bom potencial de escala para distribuição e varejo.",
+        id: "eletronicos-acessorios-mobile",
+        title: "Eletrônicos & Acessórios Mobile",
+        tagline: "Produtos de alto giro, baixa barreira e excelente margem",
+        description:
+          "Itens com alto giro e demanda constante, ideais para distribuição, varejo e marketplaces. Produtos com excelente margem e facilidade de reposição.",
         products: [
-          {
-            title: "Smartwatch Pro X9",
-            description: "Relógio inteligente com tela AMOLED, monitoramento de saúde e bateria de longa duração.",
-            image: createProductImage("Smartwatch Pro X9", "#00A6A6", "#7AE7FF"),
-            imageAlt: "Ilustração do produto Smartwatch Pro X9",
-          },
-          {
-            title: "Fone Bluetooth Pulse",
-            description: "Fone sem fio com cancelamento de ruído, estojo compacto e conexão estável.",
-            image: createProductImage("Fone Bluetooth Pulse", "#125B9A", "#5AD1FF"),
-            imageAlt: "Ilustração do produto Fone Bluetooth Pulse",
-          },
-          {
-            title: "Caixa de Som Orbit",
-            description: "Speaker portátil com graves reforçados, proteção contra respingos e autonomia estendida.",
-            image: createProductImage("Caixa de Som Orbit", "#174E4F", "#8FF3D3"),
-            imageAlt: "Ilustração do produto Caixa de Som Orbit",
-          },
+          "Capas de celular (silicone, premium, transparente)",
+          "Películas (3D, privacidade, vidro temperado)",
+          "Cabos (USB-C, Lightning, reforçados)",
+          "Carregadores (turbo, veicular)",
+          "Fones bluetooth / com fio",
+          "Ring light e iluminação para criadores",
+          "Fitas LED e iluminação decorativa",
         ],
       },
       {
-        id: "beleza",
-        title: "Beleza",
-        description: "Linhas pensadas para marcas próprias, kits promocionais e operações de e-commerce.",
+        id: "casa-cozinha-utilidades",
+        title: "Casa, Cozinha & Utilidades",
+        tagline: "Produtos virais, funcionais e com apelo visual forte",
+        description:
+          "Produtos funcionais com alto apelo visual, ideais para e-commerce, lojas físicas e vendas por redes sociais. Forte potencial de viralização.",
         products: [
-          {
-            title: "Secador Ionic Care",
-            description: "Secador de alta performance com controle térmico e acabamento premium.",
-            image: createProductImage("Secador Ionic Care", "#9B4D96", "#F2A7DF"),
-            imageAlt: "Ilustração do produto Secador Ionic Care",
-          },
-          {
-            title: "Escova Facial Glow",
-            description: "Escova elétrica para limpeza facial com modos suaves e recarregamento USB.",
-            image: createProductImage("Escova Facial Glow", "#C26E5A", "#FFD0A8"),
-            imageAlt: "Ilustração do produto Escova Facial Glow",
-          },
-          {
-            title: "Kit de Maquiagem Studio",
-            description: "Kit compacto com acabamento profissional para varejo, presentes e assinatura.",
-            image: createProductImage("Kit de Maquiagem Studio", "#C84C5B", "#FFC7CF"),
-            imageAlt: "Ilustração do produto Kit de Maquiagem Studio",
-          },
+          "Utensílios de cozinha (kits silicone, bowls, mixers)",
+          "Organizadores domésticos",
+          "Escorredores de louça",
+          "Tábuas multifuncionais",
+          "Luminárias (mesa, teto, LED)",
+          "Produtos de limpeza inteligente",
         ],
       },
       {
-        id: "casa-e-cozinha",
-        title: "Casa e Cozinha",
-        description: "Produtos funcionais com apelo visual forte para marketplaces e lojas especializadas.",
+        id: "automotivo-pet-utilidades-diversas",
+        title: "Automotivo, Pet & Utilidades Diversas",
+        tagline: "Linha complementar com alta recorrência e ticket médio variável",
+        description:
+          "Categoria estratégica para diversificação de portfólio, com produtos de necessidade recorrente e forte aceitação no mercado.",
         products: [
-          {
-            title: "Air Fryer Compact 5L",
-            description: "Fritadeira elétrica com painel digital, múltiplas funções e cesto antiaderente.",
-            image: createProductImage("Air Fryer Compact 5L", "#A55C1B", "#FFC874"),
-            imageAlt: "Ilustração do produto Air Fryer Compact 5L",
-          },
-          {
-            title: "Mixer Chef Blend",
-            description: "Mixer multifuncional com acessórios para preparo rápido em cozinhas residenciais.",
-            image: createProductImage("Mixer Chef Blend", "#486A3A", "#C8F08A"),
-            imageAlt: "Ilustração do produto Mixer Chef Blend",
-          },
-          {
-            title: "Luminária Aura Desk",
-            description: "Luminária LED articulada com design minimalista e ajuste de intensidade.",
-            image: createProductImage("Luminária Aura Desk", "#364E91", "#B8C8FF"),
-            imageAlt: "Ilustração do produto Luminária Aura Desk",
-          },
+          "Acessórios automotivos",
+          "Pneus e itens de manutenção",
+          "Produtos pet (escovas, tapetes, higiene)",
+          "Ferramentas pequenas",
+          "Organizadores multiuso",
+        ],
+      },
+      {
+        id: "energia-mobilidade-projetos-especiais",
+        title: "Energia, Mobilidade & Projetos Especiais",
+        tagline: "Produtos de maior valor e operações estruturadas",
+        description:
+          "Soluções de maior escala e valor agregado, voltadas para empresas, investidores e projetos estruturados com suporte completo da ATC.",
+        products: [
+          "Motos elétricas",
+          "Painéis solares",
+          "Iluminação industrial",
+          "Equipamentos sob demanda",
+          "Projetos industriais e agro",
         ],
       },
     ],
@@ -140,78 +93,62 @@ export const productCatalog: Record<Language, CatalogContent> = {
     backLabel: "Back to website",
     categories: [
       {
-        id: "electronics",
-        title: "Electronics",
-        description: "High-demand items with strong scale potential for retail and distribution.",
+        id: "electronics-mobile-accessories",
+        title: "Electronics & Mobile Accessories",
+        tagline: "Fast-moving products with low entry barriers and strong margins",
+        description:
+          "High-turnover items with constant demand, ideal for distribution, retail and marketplaces. Products with strong margins and easy replenishment.",
         products: [
-          {
-            title: "Smartwatch Pro X9",
-            description: "Smartwatch with AMOLED display, health tracking and long battery life.",
-            image: createProductImage("Smartwatch Pro X9", "#00A6A6", "#7AE7FF"),
-            imageAlt: "Illustration of the Smartwatch Pro X9 product",
-          },
-          {
-            title: "Pulse Bluetooth Earbuds",
-            description: "Wireless earbuds with noise cancellation, compact case and stable connection.",
-            image: createProductImage("Pulse Bluetooth Earbuds", "#125B9A", "#5AD1FF"),
-            imageAlt: "Illustration of the Pulse Bluetooth Earbuds product",
-          },
-          {
-            title: "Orbit Speaker",
-            description: "Portable speaker with deep bass, splash protection and extended battery life.",
-            image: createProductImage("Orbit Speaker", "#174E4F", "#8FF3D3"),
-            imageAlt: "Illustration of the Orbit Speaker product",
-          },
+          "Phone cases (silicone, premium, transparent)",
+          "Screen protectors (3D, privacy, tempered glass)",
+          "Cables (USB-C, Lightning, reinforced)",
+          "Chargers (fast charging, car chargers)",
+          "Bluetooth / wired earphones",
+          "Ring lights and creator lighting",
+          "LED strips and decorative lighting",
         ],
       },
       {
-        id: "beauty",
-        title: "Beauty",
-        description: "Lines designed for private label brands, promotional kits and e-commerce operations.",
+        id: "home-kitchen-utilities",
+        title: "Home, Kitchen & Utilities",
+        tagline: "Viral, functional products with strong visual appeal",
+        description:
+          "Functional products with strong visual appeal, ideal for e-commerce, physical stores and social commerce. Strong viral potential.",
         products: [
-          {
-            title: "Ionic Care Dryer",
-            description: "High-performance hair dryer with thermal control and premium finish.",
-            image: createProductImage("Ionic Care Dryer", "#9B4D96", "#F2A7DF"),
-            imageAlt: "Illustration of the Ionic Care Dryer product",
-          },
-          {
-            title: "Glow Facial Brush",
-            description: "Electric facial cleansing brush with gentle modes and USB charging.",
-            image: createProductImage("Glow Facial Brush", "#C26E5A", "#FFD0A8"),
-            imageAlt: "Illustration of the Glow Facial Brush product",
-          },
-          {
-            title: "Studio Makeup Kit",
-            description: "Compact makeup kit with professional finish for retail, gifting and subscriptions.",
-            image: createProductImage("Studio Makeup Kit", "#C84C5B", "#FFC7CF"),
-            imageAlt: "Illustration of the Studio Makeup Kit product",
-          },
+          "Kitchen utensils (silicone kits, bowls, mixers)",
+          "Home organizers",
+          "Dish racks",
+          "Multifunctional cutting boards",
+          "Lighting fixtures (desk, ceiling, LED)",
+          "Smart cleaning products",
         ],
       },
       {
-        id: "home-kitchen",
-        title: "Home & Kitchen",
-        description: "Functional products with strong visual appeal for marketplaces and specialty stores.",
+        id: "automotive-pet-diverse-utilities",
+        title: "Automotive, Pet & Diverse Utilities",
+        tagline: "Complementary line with high recurrence and variable ticket size",
+        description:
+          "A strategic category for portfolio diversification, with recurring-need products and strong market acceptance.",
         products: [
-          {
-            title: "Compact Air Fryer 5L",
-            description: "Digital air fryer with multiple cooking modes and non-stick basket.",
-            image: createProductImage("Compact Air Fryer 5L", "#A55C1B", "#FFC874"),
-            imageAlt: "Illustration of the Compact Air Fryer 5L product",
-          },
-          {
-            title: "Chef Blend Mixer",
-            description: "Multifunctional hand blender with accessories for fast home cooking.",
-            image: createProductImage("Chef Blend Mixer", "#486A3A", "#C8F08A"),
-            imageAlt: "Illustration of the Chef Blend Mixer product",
-          },
-          {
-            title: "Aura Desk Lamp",
-            description: "Articulated LED lamp with minimalist design and brightness adjustment.",
-            image: createProductImage("Aura Desk Lamp", "#364E91", "#B8C8FF"),
-            imageAlt: "Illustration of the Aura Desk Lamp product",
-          },
+          "Automotive accessories",
+          "Tires and maintenance items",
+          "Pet products (brushes, mats, hygiene)",
+          "Small tools",
+          "Multipurpose organizers",
+        ],
+      },
+      {
+        id: "energy-mobility-special-projects",
+        title: "Energy, Mobility & Special Projects",
+        tagline: "Higher-value products and structured operations",
+        description:
+          "Larger-scale, higher value-added solutions for companies, investors and structured projects with full ATC support.",
+        products: [
+          "Electric motorcycles",
+          "Solar panels",
+          "Industrial lighting",
+          "On-demand equipment",
+          "Industrial and agribusiness projects",
         ],
       },
     ],
@@ -224,78 +161,62 @@ export const productCatalog: Record<Language, CatalogContent> = {
     backLabel: "返回网站",
     categories: [
       {
-        id: "electronics",
-        title: "电子产品",
-        description: "适合零售与分销的高需求产品，具备良好的规模化潜力。",
+        id: "electronics-mobile-accessories",
+        title: "电子产品与手机配件",
+        tagline: "高周转、低门槛、利润空间良好的产品",
+        description:
+          "高周转且需求稳定的产品，适合分销、零售和电商平台。产品利润空间良好，补货便利。",
         products: [
-          {
-            title: "Smartwatch Pro X9",
-            description: "配备 AMOLED 屏幕、健康监测和长续航能力的智能手表。",
-            image: createProductImage("Smartwatch Pro X9", "#00A6A6", "#7AE7FF"),
-            imageAlt: "Smartwatch Pro X9 产品示意图",
-          },
-          {
-            title: "Pulse 蓝牙耳机",
-            description: "具备降噪、便携充电盒和稳定连接的无线耳机。",
-            image: createProductImage("Pulse Bluetooth Earbuds", "#125B9A", "#5AD1FF"),
-            imageAlt: "Pulse 蓝牙耳机产品示意图",
-          },
-          {
-            title: "Orbit 音箱",
-            description: "便携音箱，低音增强，支持防泼溅并具备更长续航。",
-            image: createProductImage("Orbit Speaker", "#174E4F", "#8FF3D3"),
-            imageAlt: "Orbit 音箱产品示意图",
-          },
+          "手机壳（硅胶、高端款、透明款）",
+          "手机膜（3D、防窥、钢化玻璃）",
+          "数据线（USB-C、Lightning、加固款）",
+          "充电器（快充、车载）",
+          "蓝牙耳机 / 有线耳机",
+          "补光灯与创作者照明",
+          "LED 灯带与装饰照明",
         ],
       },
       {
-        id: "beauty",
-        title: "美妆个护",
-        description: "适合自有品牌、促销套装和电商销售的产品线。",
+        id: "home-kitchen-utilities",
+        title: "家居、厨房与日用产品",
+        tagline: "具备传播潜力、实用性和强视觉吸引力的产品",
+        description:
+          "兼具功能性与视觉吸引力的产品，适合电商、实体店和社交媒体销售，具备较强传播潜力。",
         products: [
-          {
-            title: "Ionic Care 吹风机",
-            description: "高性能吹风机，带温控系统与高级外观。",
-            image: createProductImage("Ionic Care Dryer", "#9B4D96", "#F2A7DF"),
-            imageAlt: "Ionic Care 吹风机产品示意图",
-          },
-          {
-            title: "Glow 洁面刷",
-            description: "USB 充电电动洁面刷，提供温和清洁模式。",
-            image: createProductImage("Glow Facial Brush", "#C26E5A", "#FFD0A8"),
-            imageAlt: "Glow 洁面刷产品示意图",
-          },
-          {
-            title: "Studio 彩妆套装",
-            description: "紧凑型彩妆套装，适用于零售、礼品和订阅场景。",
-            image: createProductImage("Studio Makeup Kit", "#C84C5B", "#FFC7CF"),
-            imageAlt: "Studio 彩妆套装产品示意图",
-          },
+          "厨房用品（硅胶套装、碗具、搅拌器）",
+          "家居收纳用品",
+          "碗碟沥水架",
+          "多功能砧板",
+          "灯具（台灯、吸顶灯、LED）",
+          "智能清洁产品",
         ],
       },
       {
-        id: "home-kitchen",
-        title: "家居与厨房",
-        description: "兼顾实用性与视觉吸引力，适合平台和专业门店。",
+        id: "automotive-pet-diverse-utilities",
+        title: "汽车、宠物与多用途产品",
+        tagline: "高复购、客单价灵活的补充产品线",
+        description:
+          "适合丰富产品组合的战略品类，覆盖重复需求产品，并在市场中具备较高接受度。",
         products: [
-          {
-            title: "Compact Air Fryer 5L",
-            description: "数显空气炸锅，支持多种烹饪模式和不粘炸篮。",
-            image: createProductImage("Compact Air Fryer 5L", "#A55C1B", "#FFC874"),
-            imageAlt: "Compact Air Fryer 5L 产品示意图",
-          },
-          {
-            title: "Chef Blend 搅拌器",
-            description: "多功能搅拌器，配件齐全，适合家庭快速烹饪。",
-            image: createProductImage("Chef Blend Mixer", "#486A3A", "#C8F08A"),
-            imageAlt: "Chef Blend 搅拌器产品示意图",
-          },
-          {
-            title: "Aura 台灯",
-            description: "极简风 LED 台灯，支持角度调节和亮度控制。",
-            image: createProductImage("Aura Desk Lamp", "#364E91", "#B8C8FF"),
-            imageAlt: "Aura 台灯产品示意图",
-          },
+          "汽车配件",
+          "轮胎与维护用品",
+          "宠物产品（刷子、垫子、清洁卫生）",
+          "小型工具",
+          "多用途收纳用品",
+        ],
+      },
+      {
+        id: "energy-mobility-special-projects",
+        title: "能源、出行与专项项目",
+        tagline: "高价值产品与结构化业务",
+        description:
+          "面向企业、投资者和结构化项目的更大规模、高附加值解决方案，并由 ATC 提供完整支持。",
+        products: [
+          "电动摩托车",
+          "太阳能板",
+          "工业照明",
+          "按需定制设备",
+          "工业与农业项目",
         ],
       },
     ],
