@@ -19,7 +19,7 @@ export function CasesSection({ content }: CasesSectionProps) {
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="motion-reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl">
             <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
               {content.eyebrow}
@@ -40,9 +40,10 @@ export function CasesSection({ content }: CasesSectionProps) {
             return (
               <article
                 key={item.title}
-                className="rounded-3xl border border-primary/10 bg-background/90 p-6 sm:p-8 shadow-sm shadow-primary/5"
+                className="motion-card motion-reveal-soft rounded-3xl border border-primary/10 bg-background/90 p-6 sm:p-8 shadow-sm shadow-primary/5 hover:border-accent/35"
+                style={{ animationDelay: `${index * 90}ms` }}
               >
-                <Icon className="size-6 text-accent" aria-hidden />
+                <Icon className="motion-icon size-6 text-accent" aria-hidden />
                 <h3 className="mt-6 text-lg font-semibold text-foreground">
                   {item.title}
                 </h3>

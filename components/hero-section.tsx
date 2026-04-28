@@ -32,15 +32,15 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
 
       <div className="mx-auto max-w-6xl px-6 pt-14 pb-20 sm:pt-24 sm:pb-28 md:pt-36 md:pb-40">
         <div className="max-w-3xl">
-          <h1 className="mt-4 text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-white text-balance">
+          <h1 className="motion-reveal mt-4 text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-white text-balance">
             {content.title}
           </h1>
 
-          <p className="mt-5 text-sm sm:text-base md:text-lg text-white/75 max-w-xl leading-relaxed text-pretty">
+          <p className="motion-reveal mt-5 text-sm sm:text-base md:text-lg text-white/75 max-w-xl leading-relaxed text-pretty [animation-delay:120ms]">
             {content.description}
           </p>
 
-          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+          <div className="motion-reveal mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3 [animation-delay:220ms]">
             <Button
               asChild
               size="lg"
@@ -69,8 +69,12 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
           </div>
 
           <dl className="mt-10 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
-            {content.stats.map((stat) => (
-              <div key={stat.label} className="border-l border-white/20 pl-3 sm:pl-4">
+            {content.stats.map((stat, index) => (
+              <div
+                key={stat.label}
+                className="motion-reveal-soft border-l border-white/20 pl-3 sm:pl-4"
+                style={{ animationDelay: `${320 + index * 90}ms` }}
+              >
                 <dt className="font-mono text-base sm:text-xl md:text-2xl font-semibold text-white">
                   {stat.value}
                 </dt>

@@ -22,7 +22,7 @@ export function ServicesSection({ content }: ServicesSectionProps) {
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div className="motion-reveal flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div className="max-w-2xl">
             <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
               {content.eyebrow}
@@ -43,9 +43,10 @@ export function ServicesSection({ content }: ServicesSectionProps) {
             return (
               <div
                 key={item.title}
-                className="bg-background/88 p-6 sm:p-8 md:p-10 flex flex-col gap-4 transition-colors hover:bg-background"
+                className="motion-card motion-reveal-soft bg-background/88 p-6 sm:p-8 md:p-10 flex flex-col gap-4 hover:bg-background"
+                style={{ animationDelay: `${index * 80}ms` }}
               >
-                <Icon className="size-6 text-accent" aria-hidden />
+                <Icon className="motion-icon size-6 text-accent" aria-hidden />
                 <h3 className="text-lg font-semibold text-foreground">
                   {item.title}
                 </h3>

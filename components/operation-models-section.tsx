@@ -13,7 +13,7 @@ export function OperationModelsSection({
   return (
     <section className="py-16 md:py-32 bg-background">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-3xl">
+        <div className="motion-reveal max-w-3xl">
           <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
             {content.eyebrow}
           </span>
@@ -32,9 +32,10 @@ export function OperationModelsSection({
             return (
               <article
                 key={item.title}
-                className="rounded-3xl border border-border bg-card p-8 md:p-10"
+                className="motion-card motion-reveal-soft rounded-3xl border border-border bg-card p-8 md:p-10 hover:border-accent/35"
+                style={{ animationDelay: `${index * 90}ms` }}
               >
-                <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-secondary text-accent">
+                <div className="motion-icon inline-flex size-12 items-center justify-center rounded-2xl bg-secondary text-accent">
                   <Icon className="size-5" aria-hidden />
                 </div>
                 <h3 className="mt-6 text-xl font-semibold text-foreground">

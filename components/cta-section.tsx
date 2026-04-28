@@ -29,14 +29,14 @@ export function CtaSection({ content }: CtaSectionProps) {
       </div>
 
       <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24 md:py-32 text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-white text-balance">
+        <h2 className="motion-reveal text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-white text-balance">
           {content.title}
         </h2>
-        <p className="mt-6 text-white/75 max-w-xl mx-auto leading-relaxed">
+        <p className="motion-reveal mt-6 text-white/75 max-w-xl mx-auto leading-relaxed [animation-delay:120ms]">
           {content.description}
         </p>
 
-        <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <div className="motion-reveal mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center [animation-delay:220ms]">
           <Button
             asChild
             size="lg"

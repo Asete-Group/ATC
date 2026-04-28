@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { MotionObserver } from "@/components/motion-observer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -60,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="bg-background">
       <body className="font-sans antialiased">
+        <MotionObserver />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>

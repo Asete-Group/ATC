@@ -10,7 +10,7 @@ export function AudienceSection({ content }: AudienceSectionProps) {
       <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" aria-hidden />
       <div className="absolute left-8 top-20 h-40 w-40 rounded-full border border-primary/10 bg-primary/5 blur-2xl" aria-hidden />
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="max-w-3xl">
+        <div className="motion-reveal max-w-3xl">
           <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
             {content.eyebrow}
           </span>
@@ -20,10 +20,11 @@ export function AudienceSection({ content }: AudienceSectionProps) {
         </div>
 
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {content.items.map((item) => (
+          {content.items.map((item, index) => (
             <article
               key={item.title}
-              className="rounded-3xl border border-primary/10 bg-background/90 p-6 shadow-sm shadow-primary/5"
+              className="motion-card motion-reveal-soft rounded-3xl border border-primary/10 bg-background/90 p-6 shadow-sm shadow-primary/5 hover:border-accent/35"
+              style={{ animationDelay: `${index * 80}ms` }}
             >
               <p className="text-xs font-mono uppercase tracking-[0.18em] text-accent">
                 {content.profileLabel}

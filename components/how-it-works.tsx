@@ -18,7 +18,7 @@ export function HowItWorks({ content }: HowItWorksProps) {
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl">
+        <div className="motion-reveal max-w-2xl">
           <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
             {content.eyebrow}
           </span>
@@ -37,10 +37,11 @@ export function HowItWorks({ content }: HowItWorksProps) {
             return (
               <li
                 key={step.title}
-                className="group relative rounded-2xl border border-primary/10 bg-background/90 p-6 sm:p-8 shadow-sm shadow-primary/5 transition-colors hover:border-accent/40"
+                className="motion-card motion-reveal-soft group relative rounded-2xl border border-primary/10 bg-background/90 p-6 sm:p-8 shadow-sm shadow-primary/5 hover:border-accent/40"
+                style={{ animationDelay: `${i * 90}ms` }}
               >
                 <div className="flex items-center justify-between">
-                  <div className="inline-flex size-11 items-center justify-center rounded-xl bg-primary/8 text-primary">
+                  <div className="motion-icon inline-flex size-11 items-center justify-center rounded-xl bg-primary/8 text-primary">
                     <Icon className="size-5" aria-hidden />
                   </div>
                   <span className="font-mono text-sm text-muted-foreground">

@@ -37,7 +37,7 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
-          <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl shadow-black/20">
+          <div className="motion-card motion-reveal-soft relative overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl shadow-black/20">
             <video
               className="aspect-video w-full object-cover"
               src="/video/video_container.mp4"
@@ -53,7 +53,7 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
             </div>
           </div>
 
-          <div>
+          <div className="motion-reveal">
             <span className="text-xs uppercase tracking-[0.2em] text-accent font-mono">
               {content.eyebrow}
             </span>
@@ -72,7 +72,7 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
           {marqueeImages.map((src, index) => (
             <div
               key={`${src}-${index}`}
-              className="relative h-44 w-72 shrink-0 overflow-hidden rounded-2xl border border-white/15 bg-white/8 sm:h-56 sm:w-88"
+              className="motion-card relative h-44 w-72 shrink-0 overflow-hidden rounded-2xl border border-white/15 bg-white/8 sm:h-56 sm:w-88 hover:border-accent/45"
             >
               <Image
                 src={src}

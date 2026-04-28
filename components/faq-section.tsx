@@ -14,7 +14,7 @@ export function FaqSection({ content }: FaqSectionProps) {
   return (
     <section className="py-16 md:py-32 bg-secondary/35">
       <div className="mx-auto max-w-4xl px-6">
-        <div className="max-w-2xl">
+        <div className="motion-reveal max-w-2xl">
           <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
             {content.eyebrow}
           </span>
@@ -23,7 +23,7 @@ export function FaqSection({ content }: FaqSectionProps) {
           </h2>
         </div>
 
-        <div className="mt-10 rounded-3xl border border-border bg-card px-6 py-2 sm:px-8">
+        <div className="motion-card motion-reveal-soft mt-10 rounded-3xl border border-border bg-card px-6 py-2 sm:px-8 hover:border-accent/35">
           <Accordion type="single" collapsible>
             {content.items.map((item) => (
               <AccordionItem key={item.question} value={item.question}>
