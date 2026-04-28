@@ -162,10 +162,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     .media-marquee {
-      animation: none;
-      flex-wrap: wrap;
-      transform: none;
-      width: auto;
+      animation-duration: 90s;
     }
   }
 }
