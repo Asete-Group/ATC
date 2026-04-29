@@ -27,11 +27,11 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
       className="relative overflow-hidden bg-primary py-16 text-primary-foreground md:py-32"
     >
       <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,hsl(from_var(--accent)_h_s_l_/_0.18),transparent_32%),linear-gradient(180deg,transparent,hsl(from_var(--accent)_h_s_l_/_0.07))]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,hsl(from_var(--accent)_h_s_l/0.18),transparent_32%),linear-gradient(180deg,transparent,hsl(from_var(--accent)_h_s_l/0.07))]"
         aria-hidden
       />
       <div
-        className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
+        className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"
         aria-hidden
       />
 
@@ -67,7 +67,7 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
         </div>
       </div>
 
-      <div className="relative mt-12 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)] sm:mt-16">
+      <div className="relative mt-12 overflow-hidden mask-[linear-gradient(90deg,transparent,black_10%,black_90%,transparent)] sm:mt-16">
         <div className="media-marquee flex w-max gap-4 pr-4">
           {marqueeImages.map((src, index) => (
             <div

@@ -1,4 +1,5 @@
 import { Factory, ShieldCheck, Truck } from "lucide-react";
+import Image from "next/image";
 import { copy, type Language } from "@/lib/i18n";
 
 const caseIcons = [Factory, Truck, ShieldCheck];
@@ -9,7 +10,25 @@ type CasesSectionProps = {
 
 export function CasesSection({ content }: CasesSectionProps) {
   return (
-    <section className="relative overflow-hidden py-16 md:py-32 bg-primary/5">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,hsl(from_var(--primary)_h_s_l_/_0.16),hsl(from_var(--primary)_h_s_l_/_0.1)_48%,hsl(from_var(--accent)_h_s_l_/_0.09))] py-16 md:py-32">
+      <Image
+        src="/industry.jpg"
+        alt=""
+        fill
+        aria-hidden
+        className="object-cover opacity-40"
+        loading="eager"
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-primary/24" aria-hidden />
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-background/78 via-background/26 to-primary/18"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-[linear-gradient(90deg,hsl(from_var(--primary)_h_s_l_/_0.12),transparent_48%,hsl(from_var(--primary)_h_s_l_/_0.16))]"
+        aria-hidden
+      />
       <div
         className="absolute right-0 top-1/4 h-36 w-1 bg-primary/55"
         aria-hidden
@@ -21,14 +40,14 @@ export function CasesSection({ content }: CasesSectionProps) {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="motion-reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl">
-            <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-mono">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary/70">
               {content.eyebrow}
             </span>
             <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-balance">
               {content.title}
             </h2>
           </div>
-          <p className="max-w-sm text-muted-foreground leading-relaxed">
+          <p className="max-w-sm font-medium leading-relaxed text-foreground/72">
             {content.description}
           </p>
         </div>

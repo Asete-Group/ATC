@@ -34,9 +34,9 @@ export default async function Page({ searchParams }: PageProps) {
         <ServicesSection content={content.services} />
         <DifferentialsSection content={content.differentials} />
         <CasesSection content={content.cases} />
-        <AuthorityMediaSection content={content.authorityMedia} />
         <AudienceSection content={content.audience} />
-        <StatsSection content={content.stats} />
+        <AuthorityMediaSection content={content.authorityMedia} />
+        {/*<StatsSection content={content.stats} />*/}
         <FaqSection content={content.faq} />
         <CtaSection content={content.cta} />
       </main>

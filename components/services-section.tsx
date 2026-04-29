@@ -25,15 +25,15 @@ export function ServicesSection({ content }: ServicesSectionProps) {
       />
       <div className="absolute inset-0" aria-hidden />
       <div
-        className="absolute inset-0 bg-[linear-gradient(90deg,hsl(from_var(--primary)_h_s_l_/_0.78),hsl(from_var(--primary)_h_s_l_/_0.32)_50%,hsl(from_var(--primary)_h_s_l_/_0.7)),linear-gradient(0deg,hsl(from_var(--primary)_h_s_l_/_0.68),transparent_45%)]"
+        className="absolute inset-0 bg-[linear-gradient(90deg,hsl(from_var(--primary)_h_s_l/0.78),hsl(from_var(--primary)_h_s_l/0.32)_50%,hsl(from_var(--primary)_h_s_l/0.7)),linear-gradient(0deg,hsl(from_var(--primary)_h_s_l/0.68),transparent_45%)]"
         aria-hidden
       />
       <div
-        className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/35 to-transparent"
+        className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-white/35 to-transparent"
         aria-hidden
       />
       <div
-        className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary/80 to-transparent"
+        className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-primary/80 to-transparent"
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl px-6">
