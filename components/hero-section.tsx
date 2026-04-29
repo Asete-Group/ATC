@@ -14,7 +14,7 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
     <section id="inicio" className="relative isolate overflow-hidden pt-16">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/banner-atc.png"
+          src="/banner-atc.webp"
           alt=""
           fill
           priority

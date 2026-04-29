@@ -15,7 +15,7 @@ export function ServicesSection({ content }: ServicesSectionProps) {
       className="relative overflow-hidden bg-primary py-16 text-primary-foreground md:py-32"
     >
       <Image
-        src="/shanghai-port.jpg"
+        src="/shanghai-port.webp"
         alt=""
         fill
         aria-hidden
