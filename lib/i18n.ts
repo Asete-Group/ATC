@@ -41,9 +41,9 @@ export const copy = {
       primaryCtaMessage: "Olá, quero falar com um especialista da ATC.",
       secondaryCtaLabel: "Como funciona",
       stats: [
-        { value: "+1MM", label: "toneladas exportadas" },
+        { value: "+1M", label: "toneladas exportadas" },
         { value: "+3.000", label: "clientes atendidos" },
-        { value: "+R$1B", label: "em valores negociados" },
+        { value: "+R$1bi", label: "em valor negociado" },
       ],
     },
     howItWorks: {
@@ -192,9 +192,9 @@ export const copy = {
       description:
         "Resultados construídos em operações internacionais reais, com capacidade de execução em diferentes mercados e níveis de complexidade.",
       items: [
-        { value: "+1MM", label: "toneladas exportadas" },
+        { value: "+1M", label: "toneladas exportadas" },
         { value: "+3.000", label: "clientes atendidos" },
-        { value: "+R$1B", label: "em valores negociados" },
+        { value: "+R$1bi", label: "em valor negociado" },
       ],
     },
     faq: {
@@ -270,9 +270,9 @@ export const copy = {
       primaryCtaMessage: "Hello, I would like to talk to an ATC specialist.",
       secondaryCtaLabel: "How it works",
       stats: [
-        { value: "+1MM", label: "tons exported" },
-        { value: "+3.000", label: "clients served" },
-        { value: "+R$1B", label: "in negotiated value" },
+        { value: "1M+", label: "tons exported" },
+        { value: "3,000+", label: "clients served" },
+        { value: "R$1B+", label: "in transaction value" },
       ],
     },
     howItWorks: {
@@ -421,9 +421,9 @@ export const copy = {
       description:
         "Results built on real international operations, with execution capacity across different markets and levels of complexity.",
       items: [
-        { value: "+1MM", label: "tons exported" },
-        { value: "+3.000", label: "clients served" },
-        { value: "+R$1B", label: "in negotiated value" },
+        { value: "1M+", label: "tons exported" },
+        { value: "3,000+", label: "clients served" },
+        { value: "R$1B+", label: "in transaction value" },
       ],
     },
     faq: {
@@ -499,9 +499,9 @@ export const copy = {
       primaryCtaMessage: "您好，我想与 ATC 专家沟通。",
       secondaryCtaLabel: "运作方式",
       stats: [
-        { value: "+1MM", label: "出口吨数" },
-        { value: "+3.000", label: "服务客户" },
-        { value: "+R$1B", label: "交易金额" },
+        { value: "100万+吨", label: "出口量" },
+        { value: "3,000+", label: "服务客户" },
+        { value: "10亿+雷亚尔", label: "交易金额" },
       ],
     },
     howItWorks: {
@@ -643,9 +643,9 @@ export const copy = {
       description:
         "成果来自真实国际业务执行，覆盖不同市场和不同复杂程度的项目。",
       items: [
-        { value: "+1MM", label: "出口吨数" },
-        { value: "+3.000", label: "服务客户" },
-        { value: "+R$1B", label: "交易金额" },
+        { value: "100万+吨", label: "出口量" },
+        { value: "3,000+", label: "服务客户" },
+        { value: "10亿+雷亚尔", label: "交易金额" },
       ],
     },
     faq: {
