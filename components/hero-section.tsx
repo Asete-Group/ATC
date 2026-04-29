@@ -7,7 +7,7 @@ import { copy, localizedHref, type Language } from "@/lib/i18n";
 type HeroSectionProps = {
   lang: Language;
   content: (typeof copy)[Language]["hero"];
-}
+};
 
 export function HeroSection({ lang, content }: HeroSectionProps) {
   return (
@@ -16,6 +16,7 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
         <Image
           src="/banner-atc.webp"
           alt=""
+          loading="eager"
           fill
           priority
           className="object-cover"

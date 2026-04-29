@@ -8,8 +8,6 @@ const stepImages = [
   "/how-it-works/validacao-1.webp",
   "/how-it-works/entrega-1.webp",
 ];
-const highlightTitle = "Governanca em cada decisao";
-const highlightMetrics = ["Visibilidade", "Controle", "Seguranca"];
 
 type HowItWorksProps = {
   content: (typeof copy)[Language]["howItWorks"];
@@ -61,14 +59,14 @@ export function HowItWorks({ content }: HowItWorksProps) {
                 <BadgeCheck className="size-5" aria-hidden />
               </div>
               <h3 className="mt-6 text-xl font-semibold text-foreground sm:text-2xl">
-                {highlightTitle}
+                {content.highlightTitle}
               </h3>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 {content.highlight}
               </p>
             </div>
             <div className="mt-8 grid grid-cols-3 gap-2 border-t border-primary/10 pt-5">
-              {highlightMetrics.map((metric) => (
+              {content.highlightMetrics.map((metric) => (
                 <span
                   key={metric}
                   className="rounded-md bg-primary/5 px-3 py-2 text-center text-xs font-medium text-primary"
@@ -94,6 +92,7 @@ export function HowItWorks({ content }: HowItWorksProps) {
                   <Image
                     src={stepImages[i]}
                     alt=""
+                    loading="eager"
                     fill
                     aria-hidden
                     className="object-cover transition duration-500 group-hover:scale-[1.03]"

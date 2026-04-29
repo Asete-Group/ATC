@@ -6,7 +6,7 @@ import { copy, type Language } from "@/lib/i18n";
 
 type CtaSectionProps = {
   content: (typeof copy)[Language]["cta"];
-}
+};
 
 export function CtaSection({ content }: CtaSectionProps) {
   return (
@@ -15,6 +15,7 @@ export function CtaSection({ content }: CtaSectionProps) {
         <Image
           src="/banner-atc.webp"
           alt=""
+          loading="eager"
           fill
           className="object-cover"
           sizes="100vw"

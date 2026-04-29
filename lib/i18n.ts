@@ -65,8 +65,10 @@ export const copy = {
           desc: "Gerenciamos frete, documentação, desembaraço e entrega até o destino final da operação.",
         },
       ],
+      highlightTitle: "Governança em cada decisão",
       highlight:
         "Cada etapa é desenhada para dar visibilidade, controle e segurança comercial antes da tomada de decisão.",
+      highlightMetrics: ["Visibilidade", "Controle", "Segurança"],
     },
     services: {
       eyebrow: "Serviços",
@@ -294,8 +296,10 @@ export const copy = {
           desc: "We manage freight, documentation, customs clearance and delivery to the final destination.",
         },
       ],
+      highlightTitle: "Governance in every decision",
       highlight:
         "Every stage is designed to provide visibility, control and commercial security before decisions are made.",
+      highlightMetrics: ["Visibility", "Control", "Security"],
     },
     services: {
       eyebrow: "Services",
@@ -523,7 +527,9 @@ export const copy = {
           desc: "我们负责运费、文件、清关以及交付到最终目的地。",
         },
       ],
+      highlightTitle: "每一次决策都有治理",
       highlight: "每一个阶段都旨在在决策之前提供透明度、控制力和商业安全。",
+      highlightMetrics: ["透明度", "控制力", "安全性"],
     },
     services: {
       eyebrow: "服务",
