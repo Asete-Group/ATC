@@ -41,7 +41,10 @@ export default async function Page({ searchParams }: PageProps) {
         <CtaSection content={content.cta} />
       </main>
       <SiteFooter content={content.footer} />
-      <WhatsAppFab ariaLabel={content.whatsappAriaLabel} />
+      <WhatsAppFab
+        ariaLabel={content.whatsappAriaLabel}
+        content={content.cta}
+      />
     </>
   );
 }

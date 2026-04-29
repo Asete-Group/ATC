@@ -1,15 +1,16 @@
 import { MessageCircle } from "lucide-react";
-
-const WHATSAPP_URL = "https://wa.me/5547996135427";
+import { buildWhatsAppUrl } from "@/lib/contact";
+import { copy, type Language } from "@/lib/i18n";
 
 type WhatsAppFabProps = {
   ariaLabel: string;
+  content: (typeof copy)[Language]["cta"];
 };
 
-export function WhatsAppFab({ ariaLabel }: WhatsAppFabProps) {
+export function WhatsAppFab({ content, ariaLabel }: WhatsAppFabProps) {
   return (
     <a
-      href={WHATSAPP_URL}
+      href={buildWhatsAppUrl(content.specialistMessage)}
       target="_blank"
       rel="noreferrer"
       aria-label={ariaLabel}
