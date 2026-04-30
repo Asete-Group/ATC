@@ -3,23 +3,23 @@ import { PlayCircle } from "lucide-react";
 import { copy, type Language } from "@/lib/i18n";
 
 const authorityImages = [
-  "/authority_images/img1.png",
-  "/authority_images/img2.png",
-  "/authority_images/img3.png",
-  "/authority_images/img4.png",
-  "/authority_images/img5.png",
-  "/authority_images/img6.png",
   "/authority_images/img7.png",
-  "/authority_images/img8.png",
-  "/authority_images/img9.png",
-  "/authority_images/img10.png",
-  "/authority_images/img11.png",
-  "/authority_images/img12.png",
-  "/authority_images/img13.png",
+  "/authority_images/img2.png",
   "/authority_images/img14.png",
-  "/authority_images/img15.png",
+  "/authority_images/img5.png",
+  "/authority_images/img11.png",
+  "/authority_images/img8.png",
   "/authority_images/img16.png",
+  "/authority_images/img3.png",
+  "/authority_images/img10.png",
+  "/authority_images/img1.png",
+  "/authority_images/img15.png",
+  "/authority_images/img6.png",
+  "/authority_images/img13.png",
+  "/authority_images/img4.png",
   "/authority_images/img17.png",
+  "/authority_images/img9.png",
+  "/authority_images/img12.png",
 ] as const;
 
 type AuthorityMediaSectionProps = {
@@ -67,6 +67,14 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
               loop
               playsInline
               controls
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,hsl(from_var(--primary)_h_s_l/0.46),hsl(from_var(--accent)_h_s_l/0.2)),linear-gradient(0deg,hsl(from_var(--primary)_h_s_l/0.34),transparent_55%)] mix-blend-color"
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-primary/14"
+              aria-hidden
             />
             <div className="pointer-events-none absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur">
               <PlayCircle className="size-3.5 text-accent" aria-hidden />
