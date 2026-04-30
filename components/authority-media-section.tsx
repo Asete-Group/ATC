@@ -3,15 +3,23 @@ import { PlayCircle } from "lucide-react";
 import { copy, type Language } from "@/lib/i18n";
 
 const authorityImages = [
-  "/autoridade/aut_1.jpeg",
-  "/autoridade/aut_2.jpeg",
-  "/autoridade/aut_3.jpeg",
-  "/autoridade/aut_4.jpeg",
-  "/autoridade/aut_5.jpeg",
-  "/autoridade/aut_6.jpeg",
-  "/autoridade/aut_7.jpeg",
-  "/autoridade/aut_8.jpeg",
-  "/autoridade/aut_9.jpeg",
+  "/authority_images/img1.png",
+  "/authority_images/img2.png",
+  "/authority_images/img3.png",
+  "/authority_images/img4.png",
+  "/authority_images/img5.png",
+  "/authority_images/img6.png",
+  "/authority_images/img7.png",
+  "/authority_images/img8.png",
+  "/authority_images/img9.png",
+  "/authority_images/img10.png",
+  "/authority_images/img11.png",
+  "/authority_images/img12.png",
+  "/authority_images/img13.png",
+  "/authority_images/img14.png",
+  "/authority_images/img15.png",
+  "/authority_images/img16.png",
+  "/authority_images/img17.png",
 ] as const;
 
 type AuthorityMediaSectionProps = {
@@ -26,12 +34,24 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
       id="autoridade"
       className="relative overflow-hidden bg-primary py-16 text-primary-foreground md:py-32"
     >
+      <Image
+        src="/autoridade/aut_6.jpeg"
+        alt=""
+        fill
+        aria-hidden
+        className="object-cover"
+        sizes="100vw"
+      />
       <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,hsl(from_var(--accent)_h_s_l/0.18),transparent_32%),linear-gradient(180deg,transparent,hsl(from_var(--accent)_h_s_l/0.07))]"
+        className="absolute inset-0 bg-[linear-gradient(90deg,hsl(from_var(--primary)_h_s_l/0.84),hsl(from_var(--primary)_h_s_l/0.44)_50%,hsl(from_var(--primary)_h_s_l/0.78)),linear-gradient(0deg,hsl(from_var(--primary)_h_s_l/0.72),transparent_45%),radial-gradient(circle_at_20%_10%,hsl(from_var(--accent)_h_s_l/0.18),transparent_32%)]"
         aria-hidden
       />
       <div
         className="absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-primary/80 to-transparent"
         aria-hidden
       />
 
@@ -67,7 +87,7 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
         </div>
       </div>
 
-      <div className="relative mt-12 overflow-hidden mask-[linear-gradient(90deg,transparent,black_10%,black_90%,transparent)] sm:mt-16">
+      <div className="relative mt-12 overflow-hidden sm:mt-16">
         <div className="media-marquee flex w-max gap-4 pr-4">
           {marqueeImages.map((src, index) => (
             <div
@@ -79,8 +99,13 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
                 alt={content.imageAlt}
                 fill
                 sizes="(min-width: 640px) 352px, 288px"
-                className="object-cover"
+                className="object-cover saturate-105"
               />
+              <div
+                className="absolute inset-0 bg-[linear-gradient(90deg,hsl(from_var(--primary)_h_s_l/0.46),hsl(from_var(--accent)_h_s_l/0.2)),linear-gradient(0deg,hsl(from_var(--primary)_h_s_l/0.34),transparent_55%)] mix-blend-color"
+                aria-hidden
+              />
+              <div className="absolute inset-0 bg-primary/14" aria-hidden />
               <div
                 className="absolute inset-0 ring-1 ring-inset ring-white/10"
                 aria-hidden

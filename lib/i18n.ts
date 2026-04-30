@@ -36,14 +36,14 @@ export const copy = {
       title:
         "Soluções estratégicas que conectam você ao comércio internacional",
       description:
-        "Conectamos sua empresa às principais indústrias globais, com estratégia, segurança e atuação local na China.",
+        "Conectamos sua empresa às principais indústrias globais com estratégia, segurança e atuação local na China.",
       primaryCtaLabel: "Falar com especialista",
       primaryCtaMessage: "Olá, quero falar com um especialista da ATC.",
       secondaryCtaLabel: "Como funciona",
       stats: [
         { value: "+1M", label: "toneladas exportadas" },
         { value: "+3.000", label: "clientes atendidos" },
-        { value: "+R$1bi", label: "em valor negociado" },
+        { value: "+R$1bi", label: "em valores negociados" },
       ],
     },
     howItWorks: {
