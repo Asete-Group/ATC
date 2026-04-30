@@ -37,6 +37,7 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
       <Image
         src="/autoridade/aut_6.jpeg"
         alt=""
+        loading="eager"
         fill
         aria-hidden
         className="object-cover"
@@ -60,7 +61,7 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
           <div className="motion-card motion-reveal-soft relative overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl shadow-black/20">
             <video
               className="aspect-video w-full object-cover"
-              src="/video/video_container.mp4"
+              src="/video/video_media_optimized.mp4"
               autoPlay
               muted
               loop

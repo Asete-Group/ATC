@@ -15,3 +15,7 @@ node_modules
 .next/
 .DS_Store
 v10
+
+# Large source media
+public/**/*.mov
+public/video/video_media.mov
