@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { PlayCircle } from "lucide-react";
 import { copy, type Language } from "@/lib/i18n";
 
 const authorityImages = [
@@ -76,10 +75,6 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
               className="pointer-events-none absolute inset-0 bg-primary/14"
               aria-hidden
             />
-            <div className="pointer-events-none absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur">
-              <PlayCircle className="size-3.5 text-accent" aria-hidden />
-              {content.videoLabel}
-            </div>
           </div>
 
           <div className="motion-reveal">

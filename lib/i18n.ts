@@ -185,7 +185,6 @@ export const copy = {
       title: "Operação real, presença internacional e execução comprovada",
       description:
         "Registros de operações, visitas técnicas e acompanhamento direto em ambientes industriais e logísticos.",
-      videoLabel: "Operação em movimento",
       imageAlt: "Registro de operação internacional da ATC",
     },
     stats: {
@@ -416,7 +415,6 @@ export const copy = {
       title: "Real operations, international presence and proven execution",
       description:
         "Records from operations, technical visits and direct follow-up in industrial and logistics environments.",
-      videoLabel: "Operation in motion",
       imageAlt: "ATC international operation record",
     },
     stats: {
@@ -640,7 +638,6 @@ export const copy = {
       eyebrow: "现场实力",
       title: "真实业务、国际布局与经过验证的执行能力",
       description: "来自业务现场、技术拜访以及工业和物流环境直接跟进的记录。",
-      videoLabel: "业务动态",
       imageAlt: "ATC 国际业务记录",
     },
     stats: {
