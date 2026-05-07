@@ -4,7 +4,7 @@ import { copy, type Language } from "@/lib/i18n";
 
 type DifferentialsSectionProps = {
   content: (typeof copy)[Language]["differentials"];
-}
+};
 
 export function DifferentialsSection({ content }: DifferentialsSectionProps) {
   return (
@@ -16,6 +16,7 @@ export function DifferentialsSection({ content }: DifferentialsSectionProps) {
               src="/porto.webp"
               alt={content.imageAlt}
               fill
+              loading="eager"
               className="object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
@@ -53,7 +54,9 @@ export function DifferentialsSection({ content }: DifferentialsSectionProps) {
                     <Check className="size-3.5" aria-hidden />
                   </span>
                   <div>
-                    <h3 className="font-medium text-foreground">{item.title}</h3>
+                    <h3 className="font-medium text-foreground">
+                      {item.title}
+                    </h3>
                     <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
                       {item.desc}
                     </p>
