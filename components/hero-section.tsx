@@ -10,6 +10,12 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ lang, content }: HeroSectionProps) {
+  const imageSlots: Record<Language, string[]> = {
+    pt: ["Sourcing", "Trading", "Inteligência"],
+    en: ["Sourcing", "Trading", "Intelligence"],
+    zh: ["采购", "贸易", "情报"],
+  };
+
   return (
     <section id="inicio" className="relative isolate overflow-hidden pt-[5.25rem] md:pt-[6.75rem]">
       <div className="absolute inset-0 -z-10">
@@ -31,17 +37,17 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
         />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 pt-14 pb-20 sm:pt-24 sm:pb-28 md:pt-36 md:pb-40">
-        <div className="max-w-3xl">
-          <h1 className="motion-reveal mt-4 text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-white text-balance">
+      <div className="mx-auto max-w-6xl px-6 pt-10 pb-16 sm:pt-16 sm:pb-24 md:pt-24 md:pb-32">
+        <div className="max-w-4xl">
+          <h1 className="motion-reveal mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white text-balance">
             {content.title}
           </h1>
 
-          <p className="motion-reveal mt-5 text-sm sm:text-base md:text-lg text-white/75 max-w-xl leading-relaxed text-pretty [animation-delay:120ms]">
+          <p className="motion-reveal mt-5 text-base md:text-xl text-white/82 max-w-3xl leading-relaxed text-pretty [animation-delay:120ms]">
             {content.description}
           </p>
 
-          <div className="motion-reveal mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3 [animation-delay:220ms]">
+          <div className="motion-reveal mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3 [animation-delay:260ms]">
             <Button
               asChild
               size="lg"
@@ -69,22 +75,31 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
             </Button>
           </div>
 
-          <dl className="mt-10 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
+          <div className="mt-10 grid max-w-4xl gap-3 sm:mt-14 sm:grid-cols-3 sm:gap-4">
             {content.stats.map((stat, index) => (
-              <div
+              <article
                 key={stat.label}
-                className="motion-reveal-soft border-l border-white/20 pl-3 sm:pl-4"
-                style={{ animationDelay: `${320 + index * 90}ms` }}
+                className="motion-reveal-soft group relative min-h-36 overflow-hidden rounded-xl border border-white/14 bg-white/8 shadow-[0_18px_50px_-34px_rgba(0,0,0,0.9)] backdrop-blur-sm sm:min-h-44"
+                style={{ animationDelay: `${360 + index * 90}ms` }}
               >
-                <dt className="font-mono text-base sm:text-xl md:text-2xl font-semibold text-white">
-                  {stat.value}
-                </dt>
-                <dd className="text-[10px] sm:text-xs text-white/60 mt-1 leading-snug">
-                  {stat.label}
-                </dd>
-              </div>
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.14),transparent_40%),linear-gradient(180deg,rgba(7,22,37,0.08),rgba(7,22,37,0.84))]" />
+                <div className="absolute inset-x-4 top-4 flex items-center justify-between gap-3">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/60">
+                    {imageSlots[lang][index]}
+                  </span>
+                  <span className="h-px flex-1 bg-white/14" aria-hidden />
+                </div>
+                <div className="absolute inset-x-4 bottom-4">
+                  <p className="font-mono text-2xl font-semibold text-white md:text-3xl">
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-xs leading-snug text-white/62">
+                    {stat.label}
+                  </p>
+                </div>
+              </article>
             ))}
-          </dl>
+          </div>
         </div>
       </div>
     </section>

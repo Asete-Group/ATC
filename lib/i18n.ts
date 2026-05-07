@@ -33,10 +33,9 @@ export const copy = {
       ctaMessage: "Olá, quero solicitar uma cotação internacional.",
     },
     hero: {
-      title:
-        "Soluções estratégicas que conectam você ao comércio internacional",
+      title: "Trading, Sourcing & Inteligência Comercial Internacional",
       description:
-        "Conectamos sua empresa às principais indústrias globais com estratégia, segurança e atuação local na China.",
+        "Soluções estruturadas para empresas que desejam importar, exportar e operar no mercado global com segurança, estratégia e escala.",
       primaryCtaLabel: "Falar com especialista",
       primaryCtaMessage: "Olá, quero falar com um especialista da ATC.",
       secondaryCtaLabel: "Como funciona",
