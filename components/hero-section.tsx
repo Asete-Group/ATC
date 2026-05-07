@@ -90,7 +90,7 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
                   <span className="h-px flex-1 bg-white/14" aria-hidden />
                 </div>
                 <div className="absolute inset-x-4 bottom-4">
-                  <p className="font-mono text-2xl font-semibold text-white md:text-3xl">
+                  <p className="font-mono text-xl font-semibold text-white sm:text-2xl lg:text-3xl">
                     {stat.value}
                   </p>
                   <p className="mt-1 text-xs leading-snug text-white/62">

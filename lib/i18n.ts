@@ -40,9 +40,12 @@ export const copy = {
       primaryCtaMessage: "Olá, quero falar com um especialista da ATC.",
       secondaryCtaLabel: "Como funciona",
       stats: [
-        { value: "+1M", label: "toneladas exportadas" },
-        { value: "+3.000", label: "clientes atendidos" },
-        { value: "+R$1bi", label: "em valores negociados" },
+        { value: "+R$1 BILHÃO", label: "em operações e valores negociados" },
+        {
+          value: "+1 MILHÃO",
+          label: "em toneladas de commodities negociadas internacionalmente",
+        },
+        { value: "+3.000", label: "empresas e clientes atendidos" },
       ],
     },
     howItWorks: {
