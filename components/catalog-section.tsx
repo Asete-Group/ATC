@@ -10,7 +10,7 @@ export function CatalogSection({ lang }: CatalogSectionProps) {
 
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(90,209,255,0.2),transparent_28%),linear-gradient(180deg,rgba(8,24,48,0.04),transparent_18%),linear-gradient(135deg,#f8fbff_0%,#eef4fa_100%)]">
-      <div className="mx-auto max-w-6xl px-6 pt-28 pb-16 sm:pt-36 sm:pb-20">
+      <div className="mx-auto max-w-6xl px-6 pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-40">
         <div className="motion-reveal max-w-3xl">
           <span className="inline-flex rounded-full border border-accent/30 bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
             {content.eyebrow}

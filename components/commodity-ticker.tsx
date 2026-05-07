@@ -82,7 +82,7 @@ export function CommodityTicker({ lang }: CommodityTickerProps) {
 
   if (isLoading || quotes.length === 0) {
     return (
-      <div className="h-8 overflow-hidden border-b border-white/10 bg-primary text-primary-foreground">
+      <div className="h-7 overflow-hidden border-b border-white/10 bg-primary text-primary-foreground">
         <div className="mx-auto flex h-full max-w-6xl items-center px-6 text-[11px] font-medium uppercase tracking-[0.16em] text-white/70">
           {isLoading ? statusText[lang].loading : statusText[lang].unavailable}
         </div>
@@ -91,7 +91,7 @@ export function CommodityTicker({ lang }: CommodityTickerProps) {
   }
 
   return (
-    <div className="flex h-8 overflow-hidden border-b border-white/10 bg-primary text-primary-foreground">
+    <div className="flex h-7 overflow-hidden border-b border-white/10 bg-primary text-primary-foreground">
       <div className="commodity-marquee">
         <div className="commodity-marquee-group">
           {quotes.map((quote) => (
@@ -132,7 +132,7 @@ function CommodityTickerItem({
         : "text-white/65";
 
   return (
-    <div className="flex h-full shrink-0 items-center border-r border-white/12 px-3 text-xs leading-none">
+    <div className="flex h-full shrink-0 items-center border-r border-white/12 px-3 text-[11px] leading-none">
       <span className="font-semibold uppercase tracking-[0.08em] text-white">
         {quote.label}
       </span>

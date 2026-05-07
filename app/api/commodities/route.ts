@@ -5,7 +5,9 @@ import { type Language } from "@/lib/i18n";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-const yahooFinance = new YahooFinance();
+const yahooFinance = new YahooFinance({
+  suppressNotices: ["yahooSurvey"],
+});
 
 const labels: Record<Language, Record<string, string>> = {
   pt: {

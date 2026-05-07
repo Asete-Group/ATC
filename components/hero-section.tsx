@@ -11,7 +11,7 @@ type HeroSectionProps = {
 
 export function HeroSection({ lang, content }: HeroSectionProps) {
   return (
-    <section id="inicio" className="relative isolate overflow-hidden pt-24">
+    <section id="inicio" className="relative isolate overflow-hidden pt-[5.25rem] md:pt-[6.75rem]">
       <div className="absolute inset-0 -z-10">
         <Image
           src="/banner-atc.webp"
@@ -26,7 +26,7 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(8,24,48,0.55) 0%, rgba(8,24,48,0.65) 55%, rgba(8,24,48,0.85) 100%)",
+              "linear-gradient(180deg, rgba(7,22,37,0.92) 0%, rgba(8,24,48,0.64) 18%, rgba(8,24,48,0.65) 55%, rgba(8,24,48,0.85) 100%)",
           }}
         />
       </div>
