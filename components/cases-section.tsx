@@ -10,7 +10,10 @@ type CasesSectionProps = {
 
 export function CasesSection({ content }: CasesSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(180deg,hsl(from_var(--primary)_h_s_l_/_0.16),hsl(from_var(--primary)_h_s_l_/_0.1)_48%,hsl(from_var(--accent)_h_s_l_/_0.09))] py-16 md:py-32">
+    <section
+      id="casos"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,hsl(from_var(--primary)_h_s_l_/_0.16),hsl(from_var(--primary)_h_s_l_/_0.1)_48%,hsl(from_var(--accent)_h_s_l_/_0.09))] py-16 md:py-32"
+    >
       <Image
         src="/industry.jpg"
         alt=""
