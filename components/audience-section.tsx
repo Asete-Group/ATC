@@ -48,10 +48,7 @@ export function AudienceSection({ content }: AudienceSectionProps) {
                 />
               </div>
               <div className="p-6">
-                <p className="text-xs font-mono uppercase tracking-[0.18em] text-accent">
-                  {content.profileLabel}
-                </p>
-                <h3 className="mt-4 text-lg font-semibold text-foreground">
+                <h3 className="text-lg font-semibold text-foreground">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

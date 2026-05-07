@@ -96,13 +96,10 @@ export function HowItWorks({ content }: HowItWorksProps) {
                     className="absolute inset-0 bg-gradient-to-t from-primary/55 via-primary/5 to-transparent"
                     aria-hidden
                   />
-                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                  <div className="absolute bottom-4 left-4">
                     <div className="motion-icon inline-flex size-11 items-center justify-center rounded-xl border border-white/18 bg-primary/70 text-white backdrop-blur-sm">
                       <Icon className="size-5" aria-hidden />
                     </div>
-                    <span className="font-mono text-sm text-white/80">
-                      0{i + 1}
-                    </span>
                   </div>
                 </div>
                 <div className="p-6 sm:p-7">

@@ -11,7 +11,7 @@ type HeroSectionProps = {
 
 export function HeroSection({ lang, content }: HeroSectionProps) {
   return (
-    <section id="inicio" className="relative isolate overflow-hidden pt-16">
+    <section id="inicio" className="relative isolate overflow-hidden pt-24">
       <div className="absolute inset-0 -z-10">
         <Image
           src="/banner-atc.webp"

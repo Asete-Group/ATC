@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { buildWhatsAppUrl } from "@/lib/contact";
 import { ArrowRight } from "lucide-react";
+import { CommodityTicker } from "@/components/commodity-ticker";
 import {
   copy,
   languages,
@@ -131,6 +132,7 @@ export function SiteHeader({ lang, content }: SiteHeaderProps) {
           </div>
         </details>
       </div>
+      <CommodityTicker lang={lang} />
     </header>
   );
 }
