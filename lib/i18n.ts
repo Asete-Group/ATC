@@ -273,9 +273,12 @@ export const copy = {
       primaryCtaMessage: "Hello, I would like to talk to an ATC specialist.",
       secondaryCtaLabel: "How it works",
       stats: [
-        { value: "1M+", label: "tons exported" },
-        { value: "3,000+", label: "clients served" },
-        { value: "R$1B+", label: "in transaction value" },
+        { value: "+R$1 BILLION", label: "in negotiated operations and values" },
+        {
+          value: "+1 MILLION",
+          label: "tons of commodities traded internationally",
+        },
+        { value: "+3,000", label: "companies and clients served" },
       ],
     },
     howItWorks: {
@@ -503,9 +506,12 @@ export const copy = {
       primaryCtaMessage: "您好，我想与 ATC 专家沟通。",
       secondaryCtaLabel: "运作方式",
       stats: [
-        { value: "100万+吨", label: "出口量" },
-        { value: "3,000+", label: "服务客户" },
-        { value: "10亿+雷亚尔", label: "交易金额" },
+        { value: "+10亿+雷亚尔", label: "成交金额与运营价值" },
+        {
+          value: "+100万",
+          label: "国际贸易大宗商品吨数",
+        },
+        { value: "+3,000", label: "服务企业与客户" },
       ],
     },
     howItWorks: {

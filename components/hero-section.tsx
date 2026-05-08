@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { HeroVideoBackground } from "@/components/hero-video-background";
 import { buildWhatsAppUrl } from "@/lib/contact";
 import { copy, localizedHref, type Language } from "@/lib/i18n";
 
@@ -9,25 +10,29 @@ type HeroSectionProps = {
   content: (typeof copy)[Language]["hero"];
 };
 
-export function HeroSection({ lang, content }: HeroSectionProps) {
-  const imageSlots: Record<Language, string[]> = {
-    pt: ["Sourcing", "Trading", "Inteligência"],
-    en: ["Sourcing", "Trading", "Intelligence"],
-    zh: ["采购", "贸易", "情报"],
-  };
+const statImages = [
+  {
+    src: "/porto.webp",
+    position: "center",
+  },
+  {
+    src: "/industry.jpg",
+    position: "center 62%",
+  },
+  {
+    src: "/audience/distributors.webp",
+    position: "center",
+  },
+] as const;
 
+export function HeroSection({ lang, content }: HeroSectionProps) {
   return (
-    <section id="inicio" className="relative isolate overflow-hidden pt-[5.25rem] md:pt-[6.75rem]">
+    <section
+      id="inicio"
+      className="relative isolate overflow-hidden pt-[5.25rem] md:pt-[6.75rem]"
+    >
       <div className="absolute inset-0 -z-10">
-        <Image
-          src="/banner-atc.webp"
-          alt=""
-          loading="eager"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+        <HeroVideoBackground />
         <div
           className="absolute inset-0"
           style={{
@@ -82,13 +87,19 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
                 className="motion-reveal-soft group relative min-h-36 overflow-hidden rounded-xl border border-white/14 bg-white/8 shadow-[0_18px_50px_-34px_rgba(0,0,0,0.9)] backdrop-blur-sm sm:min-h-44"
                 style={{ animationDelay: `${360 + index * 90}ms` }}
               >
-                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.14),transparent_40%),linear-gradient(180deg,rgba(7,22,37,0.08),rgba(7,22,37,0.84))]" />
-                <div className="absolute inset-x-4 top-4 flex items-center justify-between gap-3">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/60">
-                    {imageSlots[lang][index]}
-                  </span>
-                  <span className="h-px flex-1 bg-white/14" aria-hidden />
-                </div>
+                <Image
+                  src={statImages[index]?.src ?? statImages[0].src}
+                  alt=""
+                  fill
+                  aria-hidden
+                  className="object-cover opacity-72 saturate-110 transition duration-700 group-hover:scale-[1.04]"
+                  sizes="(min-width: 640px) 33vw, 100vw"
+                  style={{
+                    objectPosition:
+                      statImages[index]?.position ?? statImages[0].position,
+                  }}
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.16),transparent_38%),linear-gradient(180deg,rgba(7,22,37,0.28),rgba(7,22,37,0.9)_72%,rgba(7,22,37,0.96)),linear-gradient(90deg,rgba(7,22,37,0.58),rgba(7,22,37,0.14))]" />
                 <div className="absolute inset-x-4 bottom-4">
                   <p className="font-mono text-xl font-semibold text-white sm:text-2xl lg:text-3xl">
                     {stat.value}

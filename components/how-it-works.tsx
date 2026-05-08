@@ -36,42 +36,6 @@ export function HowItWorks({ content }: HowItWorksProps) {
           </p>
         </div>
 
-        <div className="mt-10 sm:mt-14">
-          <div className="motion-reveal-soft relative overflow-hidden rounded-xl border border-primary/10 bg-primary shadow-2xl shadow-primary/10">
-            <video
-              className="aspect-[21/9] min-h-72 w-full object-cover sm:min-h-80 lg:min-h-0"
-              src="/how-it-works/video-ship.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            />
-            <div
-              className="absolute inset-0 bg-[linear-gradient(90deg,hsl(from_var(--primary)_h_s_l/0.82),hsl(from_var(--primary)_h_s_l/0.42)_48%,transparent),linear-gradient(0deg,hsl(from_var(--primary)_h_s_l/0.38),transparent_58%)]"
-              aria-hidden
-            />
-            <div className="absolute inset-x-0 bottom-0 max-w-2xl p-6 sm:p-8 lg:p-10">
-              <h3 className="text-2xl font-semibold tracking-tight text-white text-balance sm:text-3xl">
-                {content.highlightTitle}
-              </h3>
-              <p className="mt-3 max-w-xl leading-relaxed text-white/78">
-                {content.highlight}
-              </p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {content.highlightMetrics.map((metric) => (
-                  <span
-                    key={metric}
-                    className="rounded-md border border-white/14 bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm"
-                  >
-                    {metric}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
         <ol className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
           {content.steps.map((step, i) => {
             const Icon = stepIcons[i];
