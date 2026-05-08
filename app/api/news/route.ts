@@ -1,15 +1,18 @@
 import { NextResponse } from "next/server";
-import { getInfoMoneyNews } from "@/lib/infomoney-news";
+import { getInfoMoneyFeedKey, getInfoMoneyNews } from "@/lib/infomoney-news";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 900;
 
-export async function GET() {
+export async function GET(request: Request) {
+  const feed = getInfoMoneyFeedKey(new URL(request.url).searchParams.get("feed"));
+
   try {
-    const news = await getInfoMoneyNews();
+    const news = await getInfoMoneyNews(feed);
 
     return NextResponse.json(
       {
+        feed,
         news,
         updatedAt: new Date().toISOString(),
       },
@@ -22,6 +25,7 @@ export async function GET() {
   } catch {
     return NextResponse.json(
       {
+        feed,
         news: [],
         updatedAt: new Date().toISOString(),
       },

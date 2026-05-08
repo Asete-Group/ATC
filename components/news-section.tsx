@@ -1,14 +1,24 @@
 import { ArrowUpRight, Newspaper } from "lucide-react";
 import { copy, type Language } from "@/lib/i18n";
-import { type NewsItem } from "@/lib/infomoney-news";
+import {
+  infoMoneyFeedKeys,
+  type InfoMoneyFeedKey,
+  type NewsItem,
+} from "@/lib/infomoney-news";
 
 type NewsSectionProps = {
+  activeFeed: InfoMoneyFeedKey;
   lang: Language;
   content: (typeof copy)[Language]["news"];
   news: NewsItem[];
 };
 
-export function NewsSection({ lang, content, news }: NewsSectionProps) {
+export function NewsSection({
+  activeFeed,
+  lang,
+  content,
+  news,
+}: NewsSectionProps) {
   const dateFormatter = new Intl.DateTimeFormat(
     lang === "pt" ? "pt-BR" : lang === "zh" ? "zh-CN" : "en-US",
     {
@@ -18,6 +28,10 @@ export function NewsSection({ lang, content, news }: NewsSectionProps) {
       minute: "2-digit",
     },
   );
+  const getFeedHref = (feed: InfoMoneyFeedKey) =>
+    feed === "latest"
+      ? `/news?lang=${lang}`
+      : `/news?lang=${lang}&feed=${feed}`;
 
   return (
     <section
@@ -47,6 +61,26 @@ export function NewsSection({ lang, content, news }: NewsSectionProps) {
             {content.sourceLabel}
             <ArrowUpRight className="size-4" aria-hidden />
           </a>
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-2">
+          {infoMoneyFeedKeys.map((feed) => {
+            const isActive = feed === activeFeed;
+
+            return (
+              <a
+                key={feed}
+                href={getFeedHref(feed)}
+                className={`inline-flex h-10 items-center rounded-full border px-4 text-sm font-medium transition-colors ${
+                  isActive
+                    ? "border-primary bg-primary text-primary-foreground"
+                    : "border-primary/12 text-primary hover:border-primary/24 hover:bg-primary/5"
+                }`}
+              >
+                {content.feedTabs[feed]}
+              </a>
+            );
+          })}
         </div>
 
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">

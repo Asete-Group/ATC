@@ -1,4 +1,21 @@
-const INFOMONEY_MARKETS_FEED = "https://www.infomoney.com.br/mercados/feed/";
+const INFOMONEY_FEEDS = {
+  latest: "https://www.infomoney.com.br/mercados/feed/",
+  imports: "https://www.infomoney.com.br/tudo-sobre/importacoes/feed/",
+  exports: "https://www.infomoney.com.br/tudo-sobre/exportacoes/feed/",
+  commodities: "https://www.infomoney.com.br/tudo-sobre/commodities/feed/",
+} as const;
+
+export type InfoMoneyFeedKey = keyof typeof INFOMONEY_FEEDS;
+
+export const infoMoneyFeedKeys = Object.keys(
+  INFOMONEY_FEEDS,
+) as InfoMoneyFeedKey[];
+
+export function getInfoMoneyFeedKey(value?: string | null): InfoMoneyFeedKey {
+  return infoMoneyFeedKeys.includes(value as InfoMoneyFeedKey)
+    ? (value as InfoMoneyFeedKey)
+    : "latest";
+}
 
 export type NewsItem = {
   title: string;
@@ -81,8 +98,8 @@ function scrapeInfoMoneyFeed(xml: string): NewsItem[] {
     .slice(0, 9);
 }
 
-export async function getInfoMoneyNews() {
-  const response = await fetch(INFOMONEY_MARKETS_FEED, {
+export async function getInfoMoneyNews(feedKey: InfoMoneyFeedKey = "latest") {
+  const response = await fetch(INFOMONEY_FEEDS[feedKey], {
     headers: {
       Accept: "application/rss+xml, application/xml;q=0.9, text/xml;q=0.8",
       "User-Agent": "ATC-China-Brasil-News-Scraper/1.0",

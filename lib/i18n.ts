@@ -212,6 +212,12 @@ export const copy = {
       sourceLabel: "Ver no InfoMoney",
       readMoreLabel: "Ler notícia",
       emptyLabel: "Notícias indisponíveis no momento.",
+      feedTabs: {
+        latest: "Últimas notícias",
+        imports: "Importações",
+        exports: "Exportações",
+        commodities: "Commodities",
+      },
     },
     stats: {
       eyebrow: "Autoridade",
@@ -469,6 +475,12 @@ export const copy = {
       sourceLabel: "View on InfoMoney",
       readMoreLabel: "Read article",
       emptyLabel: "News unavailable right now.",
+      feedTabs: {
+        latest: "Latest news",
+        imports: "Imports",
+        exports: "Exports",
+        commodities: "Commodities",
+      },
     },
     stats: {
       eyebrow: "Authority",
@@ -720,6 +732,12 @@ export const copy = {
       sourceLabel: "在 InfoMoney 查看",
       readMoreLabel: "阅读新闻",
       emptyLabel: "当前新闻不可用。",
+      feedTabs: {
+        latest: "最新新闻",
+        imports: "进口",
+        exports: "出口",
+        commodities: "大宗商品",
+      },
     },
     stats: {
       eyebrow: "实力",

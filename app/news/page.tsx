@@ -2,13 +2,18 @@ import { NewsSection } from "@/components/news-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
-import { getInfoMoneyNews, type NewsItem } from "@/lib/infomoney-news";
+import {
+  getInfoMoneyFeedKey,
+  getInfoMoneyNews,
+  type NewsItem,
+} from "@/lib/infomoney-news";
 import { copy, getLanguage } from "@/lib/i18n";
 
 export const dynamic = "force-dynamic";
 
 type NewsPageProps = {
   searchParams?: Promise<{
+    feed?: string;
     lang?: string;
   }>;
 };
@@ -16,12 +21,13 @@ type NewsPageProps = {
 export default async function NewsPage({ searchParams }: NewsPageProps) {
   const params = await searchParams;
   const lang = getLanguage(params?.lang);
+  const feed = getInfoMoneyFeedKey(params?.feed);
   const content = copy[lang];
 
   let news: NewsItem[] = [];
 
   try {
-    news = await getInfoMoneyNews();
+    news = await getInfoMoneyNews(feed);
   } catch {
     news = [];
   }
@@ -30,7 +36,12 @@ export default async function NewsPage({ searchParams }: NewsPageProps) {
     <>
       <SiteHeader lang={lang} content={content.header} />
       <main>
-        <NewsSection lang={lang} content={content.news} news={news} />
+        <NewsSection
+          lang={lang}
+          content={content.news}
+          news={news}
+          activeFeed={feed}
+        />
       </main>
       <SiteFooter content={content.footer} />
       <WhatsAppFab
