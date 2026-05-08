@@ -35,6 +35,8 @@ export function SiteHeader({ lang, content }: SiteHeaderProps) {
   const [isCondensed, setIsCondensed] = useState(false);
   const lastScrollY = useRef(0);
 
+  const isNewsLink = (href: string) => href === "/news";
+
   const resolveNavHref = (href: string) =>
     href.startsWith("/")
       ? localizedPath(lang, href)
@@ -177,8 +179,14 @@ export function SiteHeader({ lang, content }: SiteHeaderProps) {
                   <a
                     key={item.href}
                     href={resolveNavHref(item.href)}
-                    className="rounded-xl px-3 py-2.5 text-sm text-white/68 transition-colors hover:bg-white/8 hover:text-white"
+                    className="flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm text-white/68 transition-colors hover:bg-white/8 hover:text-white"
                   >
+                    {isNewsLink(item.href) && (
+                      <span
+                        className="size-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)] animate-pulse"
+                        aria-hidden
+                      />
+                    )}
                     {item.label}
                   </a>
                 ))}
@@ -233,8 +241,14 @@ export function SiteHeader({ lang, content }: SiteHeaderProps) {
               <a
                 key={item.href}
                 href={resolveNavHref(item.href)}
-                className="relative flex h-8 items-center text-xs font-medium text-white/58 transition-colors hover:text-white"
+                className="relative flex h-8 items-center gap-2 text-xs font-medium text-white/58 transition-colors hover:text-white"
               >
+                {isNewsLink(item.href) && (
+                  <span
+                    className="size-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)] animate-pulse"
+                    aria-hidden
+                  />
+                )}
                 {item.label}
               </a>
             ))}
