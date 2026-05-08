@@ -27,6 +27,7 @@ export const copy = {
         { href: "#servicos", label: "Serviços" },
         { href: "#diferenciais", label: "Diferenciais" },
         { href: "#casos", label: "Casos" },
+        { href: "/news", label: "Notícias" },
         { href: "/catalogo", label: "Catálogo" },
       ],
       ctaLabel: "Falar com especialista",
@@ -189,6 +190,15 @@ export const copy = {
         "Registros de operações, visitas técnicas e acompanhamento direto em ambientes industriais e logísticos.",
       imageAlt: "Registro de operação internacional da ATC",
     },
+    news: {
+      eyebrow: "Notícias",
+      title: "Mercado e economia em tempo real",
+      description:
+        "Acompanhe notícias recentes do InfoMoney sobre mercados, empresas, commodities e indicadores que impactam decisões internacionais.",
+      sourceLabel: "Ver no InfoMoney",
+      readMoreLabel: "Ler notícia",
+      emptyLabel: "Notícias indisponíveis no momento.",
+    },
     stats: {
       eyebrow: "Autoridade",
       title: "Números que sustentam nossa operação",
@@ -260,6 +270,7 @@ export const copy = {
         { href: "#servicos", label: "Services" },
         { href: "#diferenciais", label: "Differentials" },
         { href: "#casos", label: "Cases" },
+        { href: "/news", label: "News" },
         { href: "/catalogo", label: "Catalog" },
       ],
       ctaLabel: "Talk to a specialist",
@@ -422,6 +433,15 @@ export const copy = {
         "Records from operations, technical visits and direct follow-up in industrial and logistics environments.",
       imageAlt: "ATC international operation record",
     },
+    news: {
+      eyebrow: "News",
+      title: "Markets and economy in real time",
+      description:
+        "Follow recent InfoMoney coverage on markets, companies, commodities and indicators that affect international decisions.",
+      sourceLabel: "View on InfoMoney",
+      readMoreLabel: "Read article",
+      emptyLabel: "News unavailable right now.",
+    },
     stats: {
       eyebrow: "Authority",
       title: "Numbers that support our operation",
@@ -493,6 +513,7 @@ export const copy = {
         { href: "#servicos", label: "服务" },
         { href: "#diferenciais", label: "优势" },
         { href: "#casos", label: "案例" },
+        { href: "/news", label: "新闻" },
         { href: "/catalogo", label: "目录" },
       ],
       ctaLabel: "联系专家",
@@ -647,6 +668,15 @@ export const copy = {
       title: "真实业务、国际布局与经过验证的执行能力",
       description: "来自业务现场、技术拜访以及工业和物流环境直接跟进的记录。",
       imageAlt: "ATC 国际业务记录",
+    },
+    news: {
+      eyebrow: "新闻",
+      title: "实时市场与经济动态",
+      description:
+        "关注 InfoMoney 关于市场、企业、大宗商品和影响国际决策的指标的最新报道。",
+      sourceLabel: "在 InfoMoney 查看",
+      readMoreLabel: "阅读新闻",
+      emptyLabel: "当前新闻不可用。",
     },
     stats: {
       eyebrow: "实力",
