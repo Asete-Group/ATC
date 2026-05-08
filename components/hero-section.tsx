@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeroVideoBackground } from "@/components/hero-video-background";
 import { buildWhatsAppUrl } from "@/lib/contact";
@@ -113,6 +113,14 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
           </div>
         </div>
       </div>
+
+      <a
+        href={localizedHref(lang, "#como-funciona")}
+        className="hero-scroll-cue absolute bottom-5 left-1/2 flex size-11 -translate-x-1/2 items-center justify-center rounded-full border border-white/18 bg-white/10 text-white shadow-[0_18px_45px_-24px_rgba(0,0,0,0.9)] backdrop-blur-md transition-colors hover:border-white/34 hover:bg-white/16"
+        aria-label={content.secondaryCtaLabel}
+      >
+        <ChevronDown className="size-5" aria-hidden />
+      </a>
     </section>
   );
 }

@@ -30,15 +30,15 @@ export const copy = {
         { href: "/news", label: "Notícias" },
         { href: "/catalogo", label: "Catálogo" },
       ],
-      ctaLabel: "Falar com especialista",
+      ctaLabel: "Falar com nosso time",
       ctaMessage: "Olá, quero solicitar uma cotação internacional.",
     },
     hero: {
       title: "Trading, Sourcing & Inteligência Comercial Internacional",
       description:
         "Soluções estruturadas para empresas que desejam importar, exportar e operar no mercado global com segurança, estratégia e escala.",
-      primaryCtaLabel: "Falar com especialista",
-      primaryCtaMessage: "Olá, quero falar com um especialista da ATC.",
+      primaryCtaLabel: "Falar com nosso time",
+      primaryCtaMessage: "Olá, quero falar com o time da ATC.",
       secondaryCtaLabel: "Como funciona",
       stats: [
         { value: "+R$1 BILHÃO", label: "em operações e valores negociados" },
@@ -259,11 +259,11 @@ export const copy = {
     cta: {
       title: "Pronto para importar com segurança e escala?",
       description:
-        "Fale com um especialista da ATC China Brasil e receba um diagnóstico gratuito do seu projeto.",
+        "Fale com nosso time da ATC China Brasil e receba um diagnóstico gratuito do seu projeto.",
       quoteLabel: "Solicitar cotação internacional",
       quoteMessage: "Olá, quero solicitar uma cotação internacional.",
-      specialistLabel: "Falar com especialista",
-      specialistMessage: "Olá, quero falar com um especialista da ATC.",
+      specialistLabel: "Falar com nosso time",
+      specialistMessage: "Olá, quero falar com o time da ATC.",
     },
     footer: {
       description:
@@ -286,15 +286,15 @@ export const copy = {
         { href: "/news", label: "News" },
         { href: "/catalogo", label: "Catalog" },
       ],
-      ctaLabel: "Talk to a specialist",
+      ctaLabel: "Talk to our team",
       ctaMessage: "Hello, I would like to request an international quotation.",
     },
     hero: {
       title: "International import, export and sourcing solutions",
       description:
         "We connect your company directly with the world's best factories, combining security, strategy and local presence in China.",
-      primaryCtaLabel: "Talk to a specialist",
-      primaryCtaMessage: "Hello, I would like to talk to an ATC specialist.",
+      primaryCtaLabel: "Talk to our team",
+      primaryCtaMessage: "Hello, I would like to talk to the ATC team.",
       secondaryCtaLabel: "How it works",
       stats: [
         { value: "+R$1 BILLION", label: "in negotiated operations and values" },
@@ -515,12 +515,12 @@ export const copy = {
     cta: {
       title: "Ready to import with security and scale?",
       description:
-        "Talk to an ATC China Brazil specialist and receive a free diagnosis for your project.",
+        "Talk to our ATC China Brazil team and receive a free diagnosis for your project.",
       quoteLabel: "Request international quote",
       quoteMessage:
         "Hello, I would like to request an international quotation.",
-      specialistLabel: "Talk to a specialist",
-      specialistMessage: "Hello, I would like to talk to an ATC specialist.",
+      specialistLabel: "Talk to our team",
+      specialistMessage: "Hello, I would like to talk to the ATC team.",
     },
     footer: {
       description: "International import, export and sourcing solutions.",
@@ -542,15 +542,15 @@ export const copy = {
         { href: "/news", label: "新闻" },
         { href: "/catalogo", label: "目录" },
       ],
-      ctaLabel: "联系专家",
+      ctaLabel: "联系我们的团队",
       ctaMessage: "您好，我想申请一份国际报价。",
     },
     hero: {
       title: "国际进口、出口与采购解决方案",
       description:
         "我们将您的企业直接连接到全球优质工厂，以安全、策略和中国本地执行能力推动业务发展。",
-      primaryCtaLabel: "联系专家",
-      primaryCtaMessage: "您好，我想与 ATC 专家沟通。",
+      primaryCtaLabel: "联系我们的团队",
+      primaryCtaMessage: "您好，我想与 ATC 团队沟通。",
       secondaryCtaLabel: "运作方式",
       stats: [
         { value: "+10亿+雷亚尔", label: "成交金额与运营价值" },
@@ -762,11 +762,11 @@ export const copy = {
     },
     cta: {
       title: "准备好更安全、更高效地开展进口了吗？",
-      description: "与 ATC China Brazil 专家沟通，免费获得您的项目诊断。",
+      description: "与 ATC China Brazil 团队沟通，免费获得您的项目诊断。",
       quoteLabel: "申请国际报价",
       quoteMessage: "您好，我想申请一份国际报价。",
-      specialistLabel: "联系专家",
-      specialistMessage: "您好，我想与 ATC 专家沟通。",
+      specialistLabel: "联系我们的团队",
+      specialistMessage: "您好，我想与 ATC 团队沟通。",
     },
     footer: {
       description: "国际进口、出口与采购解决方案。",
