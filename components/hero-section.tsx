@@ -3,7 +3,7 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeroVideoBackground } from "@/components/hero-video-background";
 import { buildWhatsAppUrl } from "@/lib/contact";
-import { copy, localizedHref, type Language } from "@/lib/i18n";
+import { copy, localizedHref, localizedPath, type Language } from "@/lib/i18n";
 
 type HeroSectionProps = {
   lang: Language;
@@ -114,13 +114,21 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
         </div>
       </div>
 
-      <a
-        href={localizedHref(lang, "#como-funciona")}
-        className="hero-scroll-cue absolute bottom-5 left-1/2 flex size-11 -translate-x-1/2 items-center justify-center rounded-full border border-white/18 bg-white/10 text-white shadow-[0_18px_45px_-24px_rgba(0,0,0,0.9)] backdrop-blur-md transition-colors hover:border-white/34 hover:bg-white/16"
-        aria-label={content.secondaryCtaLabel}
-      >
-        <ChevronDown className="size-5" aria-hidden />
-      </a>
+      <div className="hero-scroll-cue absolute bottom-5 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2">
+        <a
+          href={localizedPath(lang, "/news")}
+          className="whitespace-nowrap text-xs font-medium uppercase tracking-[0.18em] text-white/72 transition-colors hover:text-white"
+        >
+          {content.newsCtaLabel}
+        </a>
+        <a
+          href={localizedPath(lang, "/news")}
+          className="flex size-11 items-center justify-center rounded-full border border-white/18 bg-white/10 text-white shadow-[0_18px_45px_-24px_rgba(0,0,0,0.9)] backdrop-blur-md transition-colors hover:border-white/34 hover:bg-white/16"
+          aria-label={content.newsCtaLabel}
+        >
+          <ChevronDown className="size-5" aria-hidden />
+        </a>
+      </div>
     </section>
   );
 }

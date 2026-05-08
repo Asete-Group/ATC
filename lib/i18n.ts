@@ -40,6 +40,7 @@ export const copy = {
       primaryCtaLabel: "Falar com nosso time",
       primaryCtaMessage: "Olá, quero falar com o time da ATC.",
       secondaryCtaLabel: "Como funciona",
+      newsCtaLabel: "Clique e acompanhe as notícias do mercado",
       stats: [
         { value: "+R$1 BILHÃO", label: "em operações e valores negociados" },
         {
@@ -296,6 +297,7 @@ export const copy = {
       primaryCtaLabel: "Talk to our team",
       primaryCtaMessage: "Hello, I would like to talk to the ATC team.",
       secondaryCtaLabel: "How it works",
+      newsCtaLabel: "Click to follow market news",
       stats: [
         { value: "+R$1 BILLION", label: "in negotiated operations and values" },
         {
@@ -552,6 +554,7 @@ export const copy = {
       primaryCtaLabel: "联系我们的团队",
       primaryCtaMessage: "您好，我想与 ATC 团队沟通。",
       secondaryCtaLabel: "运作方式",
+      newsCtaLabel: "点击关注市场新闻",
       stats: [
         { value: "+10亿+雷亚尔", label: "成交金额与运营价值" },
         {

@@ -280,23 +280,23 @@
     @keyframes hero-scroll-cue {
         0%,
         100% {
-            transform: translateX(-50%) translateY(0);
+            transform: translateY(0);
         }
 
         50% {
-            transform: translateX(-50%) translateY(7px);
+            transform: translateY(7px);
         }
     }
 
     @keyframes hero-scroll-cue-enter {
         from {
             opacity: 0;
-            transform: translateX(-50%) translateY(10px) scale(0.96);
+            transform: translateY(10px) scale(0.96);
         }
 
         to {
             opacity: 1;
-            transform: translateX(-50%) translateY(0) scale(1);
+            transform: translateY(0) scale(1);
         }
     }
 
@@ -322,7 +322,7 @@
         .hero-scroll-cue {
             animation: none;
             opacity: 1;
-            transform: translateX(-50%);
+            transform: none;
         }
 
         .media-marquee {
