@@ -108,6 +108,7 @@ export function CommodityTicker({ lang }: CommodityTickerProps) {
               key={`${quote.symbol}-duplicate`}
               quote={quote}
               numberFormatter={numberFormatter}
+              tabIndex={-1}
             />
           ))}
         </div>
@@ -119,9 +120,11 @@ export function CommodityTicker({ lang }: CommodityTickerProps) {
 function CommodityTickerItem({
   quote,
   numberFormatter,
+  tabIndex,
 }: {
   quote: CommodityQuote;
   numberFormatter: Intl.NumberFormat;
+  tabIndex?: number;
 }) {
   const changePercent = quote.changePercent ?? 0;
   const directionClass =
@@ -130,9 +133,21 @@ function CommodityTickerItem({
       : changePercent < 0
         ? "text-red-300"
         : "text-white/65";
+  const yahooFinanceUrl = `https://finance.yahoo.com/quote/${encodeURIComponent(
+    quote.symbol,
+  )}`;
 
   return (
-    <div className="flex h-full shrink-0 items-center border-r border-white/12 px-3 text-[11px] leading-none">
+    <a
+      href={yahooFinanceUrl}
+      target="_blank"
+      rel="noreferrer"
+      tabIndex={tabIndex}
+      className="flex h-full shrink-0 items-center border-r border-white/12 px-3 text-[11px] leading-none transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+      aria-label={`${quote.label}: ${quote.currency} ${numberFormatter.format(
+        quote.price,
+      )}. Yahoo Finance`}
+    >
       <span className="font-semibold uppercase tracking-[0.08em] text-white">
         {quote.label}
       </span>
@@ -143,6 +158,6 @@ function CommodityTickerItem({
         {changePercent > 0 ? "+" : ""}
         {numberFormatter.format(changePercent)}%
       </span>
-    </div>
+    </a>
   );
 }

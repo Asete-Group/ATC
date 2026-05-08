@@ -21,6 +21,7 @@ const labels: Record<Language, Record<string, string>> = {
     "ZS=F": "Soja",
     "ZC=F": "Milho",
     "KC=F": "Café",
+    "SB=F": "Açúcar",
   },
   en: {
     "BRL=X": "US Dollar",
@@ -33,6 +34,7 @@ const labels: Record<Language, Record<string, string>> = {
     "ZS=F": "Soybean",
     "ZC=F": "Corn",
     "KC=F": "Coffee",
+    "SB=F": "Sugar",
   },
   zh: {
     "BRL=X": "美元",
@@ -45,6 +47,7 @@ const labels: Record<Language, Record<string, string>> = {
     "ZS=F": "大豆",
     "ZC=F": "玉米",
     "KC=F": "咖啡",
+    "SB=F": "糖",
   },
 };
 
