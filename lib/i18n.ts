@@ -51,27 +51,40 @@ export const copy = {
     },
     howItWorks: {
       eyebrow: "Como funciona",
-      title: "Um processo estruturado para reduzir risco e maximizar resultado",
+      title: "Inteligência operacional aplicada ao comércio internacional",
       description:
-        "Operamos com um modelo validado internacionalmente, garantindo controle em cada etapa da importação.",
+        "Estruturamos cada operação para reduzir risco, aumentar previsibilidade e garantir mais controle em todas as etapas do processo internacional.",
       steps: [
         {
-          title: "Diagnóstico Estratégico",
-          desc: "Analisamos produto, volume, margem, mercado e viabilidade da operação. Você recebe uma visão clara antes de investir.",
+          title: "Diagnóstico Estratégico & Viabilidade",
+          desc: "Analisamos produto, demanda, margem, mercado, tributação, logística e viabilidade comercial da operação.",
         },
         {
-          title: "Sourcing, Validação & Negociação",
-          desc: "Identificamos fábricas qualificadas, realizamos due diligence e negociamos direto na origem, sem intermediários desnecessários.",
+          title: "Sourcing Internacional, Validação & Negociação",
+          desc: "Localizamos fabricantes homologados, realizamos validações estratégicas e negociamos diretamente na origem.",
         },
         {
-          title: "Logística Internacional & Entrega Final",
-          desc: "Gerenciamos frete, documentação, desembaraço e entrega até o destino final da operação.",
+          title: "Gestão Logística, Desembaraço & Entrega Final",
+          desc: "Coordenamos documentação, frete internacional, desembaraço aduaneiro e acompanhamento operacional até a entrega final da carga.",
         },
       ],
-      highlightTitle: "Governança em cada decisão",
+      highlightTitle: "Governança, controle e execução em cada decisão",
       highlight:
-        "Cada etapa é desenhada para dar visibilidade, controle e segurança comercial antes da tomada de decisão.",
-      highlightMetrics: ["Visibilidade", "Controle", "Segurança"],
+        "Cada etapa é planejada para oferecer clareza operacional, proteção comercial e acompanhamento estratégico antes, durante e após a negociação internacional.",
+      highlightMetrics: [
+        {
+          title: "Visibilidade",
+          desc: "Acompanhamento claro da operação, custos, fornecedores e etapas do processo.",
+        },
+        {
+          title: "Controle",
+          desc: "Gestão estruturada da negociação, documentação, validações e execução operacional.",
+        },
+        {
+          title: "Segurança",
+          desc: "Atuação preventiva para reduzir riscos comerciais, logísticos e operacionais.",
+        },
+      ],
     },
     services: {
       eyebrow: "Serviços",

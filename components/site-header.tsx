@@ -88,6 +88,7 @@ export function SiteHeader({ lang, content }: SiteHeaderProps) {
           <Image
             src="/global/atc-icon-white.svg"
             alt="ATC China Brasil"
+            loading="eager"
             width={1205}
             height={375}
             priority

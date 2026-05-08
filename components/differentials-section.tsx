@@ -24,6 +24,7 @@ export function DifferentialsSection({ content }: DifferentialsSectionProps) {
               <Image
                 src="/global/atc-icon-white.svg"
                 alt=""
+                loading="eager"
                 width={1205}
                 height={375}
                 aria-hidden

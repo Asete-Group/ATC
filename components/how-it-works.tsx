@@ -17,7 +17,7 @@ export function HowItWorks({ content }: HowItWorksProps) {
   return (
     <section
       id="como-funciona"
-      className="relative overflow-hidden py-16 md:py-32 bg-[linear-gradient(180deg,hsl(from_var(--primary)_h_s_l/0.045),hsl(from_var(--accent)_h_s_l/0.035)_48%,var(--background))]"
+      className="relative overflow-hidden pb-16 pt-10 md:pb-32 md:pt-20 bg-[linear-gradient(180deg,hsl(from_var(--primary)_h_s_l/0.045),hsl(from_var(--accent)_h_s_l/0.035)_48%,var(--background))]"
     >
       <div
         className="absolute right-0 top-10 h-56 w-56 rounded-full border border-primary/10 bg-primary/5 blur-3xl"
