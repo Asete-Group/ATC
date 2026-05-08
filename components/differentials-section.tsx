@@ -13,7 +13,7 @@ export function DifferentialsSection({ content }: DifferentialsSectionProps) {
         <div className="grid gap-10 sm:gap-16 lg:grid-cols-2 lg:gap-20 items-center">
           <div className="motion-reveal-soft relative aspect-video sm:aspect-4/5 lg:aspect-auto lg:h-130 rounded-2xl overflow-hidden bg-primary">
             <Image
-              src="/porto.webp"
+              src="/global/porto.webp"
               alt={content.imageAlt}
               fill
               loading="eager"
@@ -22,7 +22,7 @@ export function DifferentialsSection({ content }: DifferentialsSectionProps) {
             />
             <div className="absolute inset-0 flex items-center justify-center p-12">
               <Image
-                src="/atc-icon-white.svg"
+                src="/global/atc-icon-white.svg"
                 alt=""
                 width={1205}
                 height={375}

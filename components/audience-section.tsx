@@ -2,9 +2,9 @@ import Image from "next/image";
 import { copy, type Language } from "@/lib/i18n";
 
 const audienceImages = [
-  "/audience/industry.webp",
-  "/audience/distributors.webp",
-  "/audience/importers.webp",
+  "/audience-section/industry.webp",
+  "/audience-section/distributors.webp",
+  "/audience-section/importers.webp",
 ];
 
 type AudienceSectionProps = {

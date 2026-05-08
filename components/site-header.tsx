@@ -86,7 +86,7 @@ export function SiteHeader({ lang, content }: SiteHeaderProps) {
           aria-label="ATC China Brasil"
         >
           <Image
-            src="/atc-icon-white.svg"
+            src="/global/atc-icon-white.svg"
             alt="ATC China Brasil"
             width={1205}
             height={375}

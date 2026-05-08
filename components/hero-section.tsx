@@ -12,15 +12,15 @@ type HeroSectionProps = {
 
 const statImages = [
   {
-    src: "/porto.webp",
+    src: "/global/porto.webp",
     position: "center",
   },
   {
-    src: "/industry.jpg",
+    src: "/global/industry.jpg",
     position: "center 62%",
   },
   {
-    src: "/audience/distributors.webp",
+    src: "/audience-section/distributors.webp",
     position: "center",
   },
 ] as const;

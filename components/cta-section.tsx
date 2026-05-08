@@ -13,7 +13,7 @@ export function CtaSection({ content }: CtaSectionProps) {
     <section id="contato" className="relative isolate overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/banner-atc.webp"
+          src="/cta-section/banner-atc.webp"
           alt=""
           loading="eager"
           fill

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "ATC China Brasil",
     images: [
       {
-        url: "/atc-dark.png",
+        url: "/global/atc-dark.png",
         width: 1205,
         height: 1205,
         alt: "ATC China Brasil",
@@ -30,26 +30,26 @@ export const metadata: Metadata = {
     title: "ATC China Brasil",
     description:
       "Conectamos sua empresa diretamente às melhores fábricas do mundo, com segurança e estratégia. Importação, exportação e sourcing na China.",
-    images: ["/atc-dark.png"],
+    images: ["/global/atc-dark.png"],
   },
   icons: {
     icon: [
       {
-        url: "/atc-dark.png",
+        url: "/global/atc-dark.png",
         media: "(prefers-color-scheme: light)",
         type: "image/png",
       },
       {
-        url: "/atc-light.png",
+        url: "/global/atc-light.png",
         media: "(prefers-color-scheme: dark)",
         type: "image/png",
       },
       {
-        url: "/atc-light.png",
+        url: "/global/atc-light.png",
         type: "image/png",
       },
     ],
-    apple: "/atc-light.png",
+    apple: "/global/atc-light.png",
   },
 };
 

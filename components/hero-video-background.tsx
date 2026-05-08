@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const heroVideos = [
-  "/video/hero-videos/hero-video-01.mp4",
-  "/video/hero-videos/hero-video-02.mp4",
-  "/video/hero-videos/hero-video-03.mp4",
-  "/video/hero-videos/hero-video-04.mp4",
+  "/hero-section/videos/hero-video-01.mp4",
+  "/hero-section/videos/hero-video-02.mp4",
+  "/hero-section/videos/hero-video-03.mp4",
+  "/hero-section/videos/hero-video-04.mp4",
 ] as const;
 
 export function HeroVideoBackground() {

@@ -11,7 +11,7 @@ export function SiteFooter({ content }: SiteFooterProps) {
       <div className="mx-auto max-w-6xl px-6 py-10 sm:py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
           <Image
-            src="/atc-icon-black.svg"
+            src="/global/atc-icon-black.svg"
             alt="ATC China Brasil"
             width={1205}
             height={375}

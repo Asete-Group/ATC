@@ -2,51 +2,51 @@ import Image from "next/image";
 import { copy, type Language } from "@/lib/i18n";
 
 const authorityImages = [
-  "/authority_images/img32.jpeg",
-  "/authority_images/img7.jpeg",
-  "/authority_images/img41.jpeg",
-  "/authority_images/img18.jpeg",
-  "/authority_images/img2.jpeg",
-  "/authority_images/img27.jpeg",
-  "/authority_images/img14.jpeg",
-  "/authority_images/img39.jpeg",
-  "/authority_images/img5.jpeg",
-  "/authority_images/img22.jpeg",
-  "/authority_images/img11.jpeg",
-  "/authority_images/img44.jpeg",
-  "/authority_images/img8.jpeg",
-  "/authority_images/img30.jpeg",
-  "/authority_images/img16.jpeg",
-  "/authority_images/img25.jpeg",
-  "/authority_images/img3.jpeg",
-  "/authority_images/img36.jpeg",
-  "/authority_images/img10.jpeg",
-  "/authority_images/img21.jpeg",
-  "/authority_images/img1.jpeg",
-  "/authority_images/img45.jpeg",
-  "/authority_images/img15.jpeg",
-  "/authority_images/img28.jpeg",
-  "/authority_images/img6.jpeg",
-  "/authority_images/img34.jpeg",
-  "/authority_images/img13.jpeg",
-  "/authority_images/img24.jpeg",
-  "/authority_images/img4.jpeg",
-  "/authority_images/img40.jpeg",
-  "/authority_images/img17.jpeg",
-  "/authority_images/img29.jpeg",
-  "/authority_images/img9.jpeg",
-  "/authority_images/img37.jpeg",
-  "/authority_images/img12.jpeg",
-  "/authority_images/img20.jpeg",
-  "/authority_images/img43.jpeg",
-  "/authority_images/img26.jpeg",
-  "/authority_images/img33.jpeg",
-  "/authority_images/img19.png",
-  "/authority_images/img42.jpeg",
-  "/authority_images/img31.jpeg",
-  "/authority_images/img23.jpeg",
-  "/authority_images/img38.jpeg",
-  "/authority_images/img35.jpeg",
+  "/authority-media-section/images/img32.jpeg",
+  "/authority-media-section/images/img7.jpeg",
+  "/authority-media-section/images/img41.jpeg",
+  "/authority-media-section/images/img18.jpeg",
+  "/authority-media-section/images/img2.jpeg",
+  "/authority-media-section/images/img27.jpeg",
+  "/authority-media-section/images/img14.jpeg",
+  "/authority-media-section/images/img39.jpeg",
+  "/authority-media-section/images/img5.jpeg",
+  "/authority-media-section/images/img22.jpeg",
+  "/authority-media-section/images/img11.jpeg",
+  "/authority-media-section/images/img44.jpeg",
+  "/authority-media-section/images/img8.jpeg",
+  "/authority-media-section/images/img30.jpeg",
+  "/authority-media-section/images/img16.jpeg",
+  "/authority-media-section/images/img25.jpeg",
+  "/authority-media-section/images/img3.jpeg",
+  "/authority-media-section/images/img36.jpeg",
+  "/authority-media-section/images/img10.jpeg",
+  "/authority-media-section/images/img21.jpeg",
+  "/authority-media-section/images/img1.jpeg",
+  "/authority-media-section/images/img45.jpeg",
+  "/authority-media-section/images/img15.jpeg",
+  "/authority-media-section/images/img28.jpeg",
+  "/authority-media-section/images/img6.jpeg",
+  "/authority-media-section/images/img34.jpeg",
+  "/authority-media-section/images/img13.jpeg",
+  "/authority-media-section/images/img24.jpeg",
+  "/authority-media-section/images/img4.jpeg",
+  "/authority-media-section/images/img40.jpeg",
+  "/authority-media-section/images/img17.jpeg",
+  "/authority-media-section/images/img29.jpeg",
+  "/authority-media-section/images/img9.jpeg",
+  "/authority-media-section/images/img37.jpeg",
+  "/authority-media-section/images/img12.jpeg",
+  "/authority-media-section/images/img20.jpeg",
+  "/authority-media-section/images/img43.jpeg",
+  "/authority-media-section/images/img26.jpeg",
+  "/authority-media-section/images/img33.jpeg",
+  "/authority-media-section/images/img19.png",
+  "/authority-media-section/images/img42.jpeg",
+  "/authority-media-section/images/img31.jpeg",
+  "/authority-media-section/images/img23.jpeg",
+  "/authority-media-section/images/img38.jpeg",
+  "/authority-media-section/images/img35.jpeg",
 ] as const;
 
 type AuthorityMediaSectionProps = {
@@ -62,7 +62,7 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
       className="relative overflow-hidden bg-primary py-16 text-primary-foreground md:py-32"
     >
       <Image
-        src="/autoridade/aut_6.jpeg"
+        src="/authority-media-section/featured/aut_6.jpeg"
         alt=""
         loading="eager"
         fill
@@ -88,7 +88,7 @@ export function AuthorityMediaSection({ content }: AuthorityMediaSectionProps) {
           <div className="motion-card motion-reveal-soft relative overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl shadow-black/20">
             <video
               className="aspect-video w-full object-cover"
-              src="/video/video_media_optimized.mp4"
+              src="/authority-media-section/video/video_media_optimized.mp4"
               autoPlay
               muted
               loop
