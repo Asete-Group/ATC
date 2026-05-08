@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useLayoutEffect, useRef, useState } from "react";
 
 const heroVideos = [
   "/hero-section/videos/hero-video-01.mp4",
@@ -13,7 +13,7 @@ export function HeroVideoBackground() {
   const [activeVideo, setActiveVideo] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const playCurrentVideo = useCallback(() => {
+  const prepareAndPlayVideo = useCallback((src = heroVideos[activeVideo]) => {
     const video = videoRef.current;
 
     if (!video) {
@@ -24,18 +24,26 @@ export function HeroVideoBackground() {
     video.defaultMuted = true;
     video.playsInline = true;
     video.controls = false;
+    video.autoplay = true;
     video.removeAttribute("controls");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "");
+
+    if (video.getAttribute("src") !== src) {
+      video.setAttribute("src", src);
+      video.load();
+    }
 
     video.play().catch(() => {
       // Browsers can briefly block autoplay while the source changes.
     });
-  }, []);
+  }, [activeVideo]);
 
-  useEffect(() => {
-    playCurrentVideo();
-  }, [activeVideo, playCurrentVideo]);
+  useLayoutEffect(() => {
+    prepareAndPlayVideo();
+  }, [prepareAndPlayVideo]);
 
   function playNextVideo() {
     setActiveVideo((current) => (current + 1) % heroVideos.length);
@@ -43,10 +51,8 @@ export function HeroVideoBackground() {
 
   return (
     <video
-      key={heroVideos[activeVideo]}
       ref={videoRef}
-      className="pointer-events-none size-full object-cover"
-      src={heroVideos[activeVideo]}
+      className="hero-background-video pointer-events-none size-full object-cover"
       autoPlay
       muted
       playsInline
@@ -55,8 +61,8 @@ export function HeroVideoBackground() {
       tabIndex={-1}
       disablePictureInPicture
       controls={false}
-      onCanPlay={playCurrentVideo}
-      onLoadedData={playCurrentVideo}
+      onCanPlay={() => prepareAndPlayVideo()}
+      onLoadedData={() => prepareAndPlayVideo()}
       onEnded={playNextVideo}
       onError={playNextVideo}
     />

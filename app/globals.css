@@ -145,6 +145,15 @@
 }
 
 @layer utilities {
+    .hero-background-video::-webkit-media-controls,
+    .hero-background-video::-webkit-media-controls-panel,
+    .hero-background-video::-webkit-media-controls-play-button,
+    .hero-background-video::-webkit-media-controls-start-playback-button {
+        display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
     .motion-reveal {
         opacity: 0;
         transform: translateY(18px);
