@@ -88,25 +88,25 @@ export const copy = {
     },
     services: {
       eyebrow: "Serviços",
-      title: "Soluções completas para operações internacionais",
+      title: "Soluções estratégicas para operações internacionais",
       description:
-        "Atuação consultiva e operacional para empresas que precisam escalar com inteligência, controle e execução internacional confiável.",
+        "Atuamos de forma consultiva, comercial e operacional para empresas que precisam importar, exportar ou estruturar operações globais com mais segurança, margem e previsibilidade.",
       items: [
         {
-          title: "Importação Estratégica (End-to-End)",
-          desc: "Operação completa, do planejamento à entrega. Modelo chave na mão para empresas que buscam escala com segurança.",
+          title: "Importação Eficaz End-to-End",
+          desc: "Estruturamos toda a operação internacional, desde o planejamento até a entrega final da carga.",
         },
         {
-          title: "Sourcing & Desenvolvimento na China",
-          desc: "Busca, validação e negociação direta com fábricas homologadas, incluindo auditoria, amostras e análise técnica.",
+          title: "Sourcing Internacional & Desenvolvimento na China",
+          desc: "Localizamos fabricantes homologados e desenvolvemos fornecedores alinhados ao perfil técnico, comercial e estratégico da operação.",
         },
         {
           title: "Intermediação Internacional de Negócios",
-          desc: "Conectamos compradores e fornecedores globais com segurança jurídica e inteligência cultural.",
+          desc: "Conectamos empresas, compradores, fornecedores e parceiros estratégicos em operações internacionais estruturadas.",
         },
         {
           title: "Exportação & Commodities",
-          desc: "Estruturação e execução de operações internacionais para produtos brasileiros.",
+          desc: "Estruturamos operações internacionais para commodities e produtos brasileiros com foco em escala, previsibilidade e conexão global.",
         },
       ],
     },
@@ -307,49 +307,62 @@ export const copy = {
     },
     howItWorks: {
       eyebrow: "How it works",
-      title: "A structured process to reduce risk and maximize results",
+      title: "Operational intelligence applied to international trade",
       description:
-        "We operate with an internationally validated model, ensuring control at every stage of the import process.",
+        "We structure each operation to reduce risk, increase predictability, and ensure greater control across every stage of the international process.",
       steps: [
         {
-          title: "Strategic Diagnosis",
-          desc: "We assess product, volume, margin, market and operational feasibility. You gain a clear picture before investing.",
+          title: "Strategic Diagnosis & Feasibility",
+          desc: "We analyze the product, demand, margin, market, taxation, logistics, and commercial feasibility of the operation.",
         },
         {
-          title: "Sourcing, Validation & Negotiation",
-          desc: "We identify qualified factories, perform due diligence and negotiate directly at origin, without unnecessary intermediaries.",
+          title: "International Sourcing, Validation & Negotiation",
+          desc: "We locate approved manufacturers, carry out strategic validations, and negotiate directly at origin.",
         },
         {
-          title: "International Logistics & Final Delivery",
-          desc: "We manage freight, documentation, customs clearance and delivery to the final destination.",
+          title: "Logistics Management, Customs Clearance & Final Delivery",
+          desc: "We coordinate documentation, international freight, customs clearance, and operational follow-up through to final cargo delivery.",
         },
       ],
-      highlightTitle: "Governance in every decision",
+      highlightTitle: "Governance, control, and execution in every decision",
       highlight:
-        "Every stage is designed to provide visibility, control and commercial security before decisions are made.",
-      highlightMetrics: ["Visibility", "Control", "Security"],
+        "Each stage is planned to provide operational clarity, commercial protection, and strategic follow-up before, during, and after the international negotiation.",
+      highlightMetrics: [
+        {
+          title: "Visibility",
+          desc: "Clear monitoring of the operation, costs, suppliers, and process stages.",
+        },
+        {
+          title: "Control",
+          desc: "Structured management of negotiation, documentation, validations, and operational execution.",
+        },
+        {
+          title: "Security",
+          desc: "Preventive action to reduce commercial, logistics, and operational risks.",
+        },
+      ],
     },
     services: {
       eyebrow: "Services",
-      title: "Complete solutions for international operations",
+      title: "Strategic solutions for international operations",
       description:
-        "Consulting and operational support for companies that need to scale with intelligence, control and reliable international execution.",
+        "We provide consulting, commercial, and operational support for companies that need to import, export, or structure global operations with greater security, margin, and predictability.",
       items: [
         {
-          title: "Strategic Importing (End-to-End)",
-          desc: "Complete operation from planning to delivery. A turnkey model for companies seeking scale with security.",
+          title: "Effective End-to-End Importing",
+          desc: "We structure the entire international operation, from planning through to final cargo delivery.",
         },
         {
-          title: "Sourcing & Product Development in China",
-          desc: "Search, validation and direct negotiation with approved factories, including audits, samples and technical review.",
+          title: "International Sourcing & Development in China",
+          desc: "We locate approved manufacturers and develop suppliers aligned with the technical, commercial, and strategic profile of the operation.",
         },
         {
           title: "International Business Intermediation",
-          desc: "We connect global buyers and suppliers with legal certainty and cultural intelligence.",
+          desc: "We connect companies, buyers, suppliers, and strategic partners in structured international operations.",
         },
         {
           title: "Exports & Commodities",
-          desc: "Structuring and execution of international operations for Brazilian products.",
+          desc: "We structure international operations for commodities and Brazilian products with a focus on scale, predictability, and global connection.",
         },
       ],
     },
@@ -550,48 +563,62 @@ export const copy = {
     },
     howItWorks: {
       eyebrow: "运作方式",
-      title: "以结构化流程降低风险并提升结果",
+      title: "面向国际贸易的运营智能",
       description:
-        "我们采用经过国际验证的运营模式，确保进口流程每个阶段都可控。",
+        "我们为每一项业务进行结构化设计，以降低风险、提升可预测性，并在国际流程的各个环节实现更强控制。",
       steps: [
         {
-          title: "战略诊断",
-          desc: "我们评估产品、数量、利润、市场与可行性，让您在投入前获得清晰判断。",
+          title: "战略诊断与可行性评估",
+          desc: "我们分析产品、需求、利润空间、市场、税务、物流以及该业务的商业可行性。",
         },
         {
-          title: "采购、验证与谈判",
-          desc: "我们筛选合格工厂，执行尽职调查，并在原产地直接谈判，避免不必要的中间环节。",
+          title: "国际寻源、验证与谈判",
+          desc: "我们寻找经认证的制造商，开展战略性验证，并直接在源头进行谈判。",
         },
         {
-          title: "国际物流与最终交付",
-          desc: "我们负责运费、文件、清关以及交付到最终目的地。",
+          title: "物流管理、清关与最终交付",
+          desc: "我们协调文件、国际运输、海关清关，并持续跟进运营直至货物最终交付。",
         },
       ],
-      highlightTitle: "每一次决策都有治理",
-      highlight: "每一个阶段都旨在在决策之前提供透明度、控制力和商业安全。",
-      highlightMetrics: ["透明度", "控制力", "安全性"],
+      highlightTitle: "每一次决策中的治理、控制与执行",
+      highlight:
+        "每个阶段都经过规划，以在国际谈判前、中、后提供清晰的运营视角、商业保护和战略跟进。",
+      highlightMetrics: [
+        {
+          title: "可视性",
+          desc: "清晰跟进业务、成本、供应商以及流程各阶段。",
+        },
+        {
+          title: "控制力",
+          desc: "对谈判、文件、验证和运营执行进行结构化管理。",
+        },
+        {
+          title: "安全性",
+          desc: "通过预防性行动降低商业、物流和运营风险。",
+        },
+      ],
     },
     services: {
       eyebrow: "服务",
-      title: "国际业务的完整解决方案",
+      title: "国际业务的战略解决方案",
       description:
-        "为需要以更高效率、更强控制力和可靠国际执行实现规模化的企业提供咨询与运营支持。",
+        "我们为需要进口、出口或搭建全球业务的企业提供咨询、商务和运营支持，帮助其实现更高安全性、利润空间和可预测性。",
       items: [
         {
-          title: "战略进口（端到端）",
-          desc: "从规划到交付的完整操作。适合追求安全扩张的企业的一站式模式。",
+          title: "高效端到端进口",
+          desc: "我们搭建完整的国际业务流程，从规划一直到货物最终交付。",
         },
         {
-          title: "中国采购与产品开发",
-          desc: "与合格工厂进行搜寻、验证和直接谈判，包括审厂、样品与技术评估。",
+          title: "国际寻源与中国供应商开发",
+          desc: "我们寻找经认证的制造商，并开发符合业务技术、商业和战略需求的供应商。",
         },
         {
           title: "国际商务撮合",
-          desc: "我们以法律保障和文化理解连接全球买家与供应商。",
+          desc: "我们在结构化国际业务中连接企业、买家、供应商和战略合作伙伴。",
         },
         {
           title: "出口与大宗商品",
-          desc: "为巴西产品提供国际业务的结构设计与执行。",
+          desc: "我们为大宗商品和巴西产品搭建国际业务，聚焦规模、可预测性和全球连接。",
         },
       ],
     },
