@@ -29,7 +29,7 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
   return (
     <section
       id="inicio"
-      className="relative isolate overflow-hidden pt-[5.25rem] md:pt-[6.75rem]"
+      className="relative isolate min-h-svh overflow-hidden pt-[5.25rem] md:pt-[6.75rem]"
     >
       <div className="absolute inset-0 -z-10">
         <HeroVideoBackground />
@@ -42,7 +42,7 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
         />
       </div>
 
-      <div className="mx-auto max-w-6xl px-5 pt-8 pb-10 sm:px-6 sm:pt-16 sm:pb-32 md:pt-24 md:pb-36">
+      <div className="mx-auto flex min-h-[calc(100svh-5.25rem)] w-full max-w-6xl flex-col px-5 pt-8 pb-6 sm:px-6 sm:pt-16 sm:pb-7 md:min-h-[calc(100svh-6.75rem)] md:pt-20 md:pb-8">
         <div className="max-w-4xl">
           <h1 className="motion-reveal mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white text-balance">
             {content.title}
@@ -80,7 +80,7 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
             </Button>
           </div>
 
-          <div className="mt-8 grid max-w-4xl gap-3 sm:mt-14 sm:grid-cols-3 sm:gap-4">
+          <div className="mt-8 grid max-w-4xl gap-3 sm:mt-12 sm:grid-cols-3 sm:gap-4 lg:mt-14">
             {content.stats.map((stat, index) => (
               <article
                 key={stat.label}
@@ -92,6 +92,7 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
                   alt=""
                   fill
                   aria-hidden
+                  loading="eager"
                   className="object-cover opacity-72 saturate-110 transition duration-700 group-hover:scale-[1.04]"
                   sizes="(min-width: 640px) 33vw, 100vw"
                   style={{
@@ -113,7 +114,7 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
           </div>
         </div>
 
-        <div className="hero-scroll-cue relative mx-auto mt-8 flex w-fit flex-col items-center gap-2 px-5 text-center sm:absolute sm:bottom-5 sm:left-1/2 sm:mx-0 sm:mt-0 sm:-translate-x-1/2">
+        <div className="hero-scroll-cue relative mx-auto mt-auto flex w-fit flex-col items-center gap-2 px-5 pt-8 text-center sm:pt-10">
           <a
             href={localizedPath(lang, "/news")}
             className="max-w-[calc(100vw-2.5rem)] text-balance text-[0.68rem] font-medium uppercase leading-snug tracking-[0.16em] text-white/72 transition-colors hover:text-white sm:whitespace-nowrap sm:text-xs sm:tracking-[0.18em]"
@@ -122,7 +123,7 @@ export function HeroSection({ lang, content }: HeroSectionProps) {
           </a>
           <a
             href={localizedPath(lang, "/news")}
-            className="flex size-11 items-center justify-center rounded-full border border-white/18 bg-white/10 text-white shadow-[0_18px_45px_-24px_rgba(0,0,0,0.9)] backdrop-blur-md transition-colors hover:border-white/34 hover:bg-white/16"
+            className="mt-1 flex size-11 items-center justify-center rounded-full border border-white/18 bg-white/10 text-white shadow-[0_18px_45px_-24px_rgba(0,0,0,0.9)] backdrop-blur-md transition-colors hover:border-white/34 hover:bg-white/16 sm:mt-2"
             aria-label={content.newsCtaLabel}
           >
             <ChevronDown className="size-5" aria-hidden />
